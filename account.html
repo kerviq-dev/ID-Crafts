@@ -1,0 +1,1584 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Client Profile &amp; Account Dashboard — ID CRAFT</title>
+  <meta name="description" content="Manage your profile, orders, custom design requests, addresses and preferences at ID CRAFT."/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;family=Syne:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/custom.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      "darkMode": "class",
+      "theme": {
+        "extend": {
+          "colors": {
+            "on-tertiary-fixed-variant": "#5d4201",
+            "surface-bright": "#38393b",
+            "on-secondary-fixed": "#1d1c16",
+            "on-tertiary": "#412d00",
+            "surface-container-lowest": "#0d0e10",
+            "inverse-on-surface": "#303033",
+            "outline": "#99907c",
+            "surface-container-high": "#292a2c",
+            "on-primary-container": "#554300",
+            "on-error-container": "#ffdad6",
+            "primary-fixed-dim": "#e9c349",
+            "on-surface-variant": "#d0c5af",
+            "secondary-fixed-dim": "#cac6bd",
+            "tertiary": "#f1c97d",
+            "primary": "#f2ca50",
+            "surface-container-low": "#1b1c1e",
+            "on-secondary-fixed-variant": "#494740",
+            "surface-container": "#1f2022",
+            "on-secondary": "#32302a",
+            "on-primary": "#3c2f00",
+            "on-primary-fixed-variant": "#574500",
+            "surface-tint": "#e9c349",
+            "error-container": "#93000a",
+            "outline-variant": "#4d4635",
+            "on-error": "#690005",
+            "surface-container-highest": "#343537",
+            "on-secondary-container": "#b9b5ac",
+            "secondary": "#cac6bd",
+            "surface-variant": "#343537",
+            "inverse-primary": "#735c00",
+            "on-surface": "#e3e2e5",
+            "background": "#121315",
+            "on-background": "#e3e2e5",
+            "surface": "#121315",
+            "on-tertiary-fixed": "#261900",
+            "surface-dim": "#121315",
+            "secondary-container": "#494740",
+            "inverse-surface": "#e3e2e5",
+            "on-tertiary-container": "#5b4000",
+            "primary-fixed": "#ffe088",
+            "on-primary-fixed": "#241a00",
+            "secondary-fixed": "#e7e2d9",
+            "tertiary-fixed": "#ffdea5",
+            "tertiary-container": "#d3ad65",
+            "tertiary-fixed-dim": "#e9c176",
+            "primary-container": "#d4af37",
+            "error": "#ffb4ab"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-xl": "4rem",
+            "margin": "1.25rem",
+            "space-xs": "0.375rem",
+            "space-sm": "0.75rem",
+            "space-lg": "2.25rem",
+            "margin-tablet": "2.5rem",
+            "gutter-desktop": "3rem",
+            "margin-desktop": "5rem",
+            "gutter": "1.5rem",
+            "gutter-tablet": "2rem",
+            "space-md": "1.25rem"
+          },
+          "fontFamily": {
+            "headline-md": ["Syne", "sans-serif"],
+            "label-mono-spec": ["Plus Jakarta Sans", "sans-serif"],
+            "label-action": ["Syne", "sans-serif"],
+            "headline-sm": ["Syne", "sans-serif"],
+            "body-md": ["Plus Jakarta Sans", "sans-serif"],
+            "display-hero-mobile": ["Syne", "sans-serif"],
+            "body-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "label-eyebrow": ["Syne", "sans-serif"],
+            "headline-xl": ["Syne", "sans-serif"],
+            "display-hero": ["Syne", "sans-serif"],
+            "headline-lg": ["Syne", "sans-serif"],
+            "body-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "body-xl": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-xl-mobile": ["Syne", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container">
+
+  <!-- ID CRAFT BESPOKE ATELIER FIXED HEADER (FULL WIDTH LUXURY) -->
+  <header class="fixed top-0 inset-x-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_1px_12px_rgba(0,0,0,0.4)]">
+    <div class="h-20 max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 flex items-center justify-between gap-4">
+      <a href="index.html" class="atelier-logo-brand shrink-0 flex items-center gap-3 group select-none">
+        <img alt="ID CRAFT Luxury Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1WQuwLIdSGZ0krsGOhlWCpQj3_eEfPT6j2SmeVRt7W5OpQk0CStqANVQ_rfZsNUScsNGklGnqUi-N_-tZjfrbsYXs5Ydc6VOaTbCyIP47T6myPegKapAUxoPavmO8WmwDdp7hM6ez4oDJxm1-o12b-h0tdYOm0qemnVx-geYmPWN62wzpHXP0-9ZQMGb9_BCdnZ5KsZq96_-UAdIDarDaP7UR-_kakLArn9Cxwi1B8MvUXWJWKaWFLXZkA"/>
+        <div class="atelier-logo-text flex flex-col justify-center border-l border-outline-variant/40 pl-3 whitespace-nowrap shrink-0">
+          <span class="atelier-logo-title font-label-action text-xs lg:text-sm font-bold uppercase tracking-widest text-on-surface group-hover:text-primary transition-colors whitespace-nowrap">ID&nbsp;CRAFT</span>
+          <span class="atelier-logo-sub font-label-mono-spec text-[10px] tracking-widest uppercase text-tertiary whitespace-nowrap">Kuwait&nbsp;Atelier</span>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-1 xl:gap-2 whitespace-nowrap">
+        <a class="atelier-nav-link" data-path="home" href="index.html">Home</a>
+        <a class="atelier-nav-link" data-path="shop" href="shop.html">Shop</a>
+        <a class="atelier-nav-link" data-path="custom-order" href="custom-order.html">Custom Order</a>
+        <a class="atelier-nav-link" data-path="corporate" href="corporate.html">Corporate</a>
+        <a class="atelier-nav-link" data-path="our-work" href="our-work.html">Our Work</a>
+        <a class="atelier-nav-link" data-path="about" href="about.html">About</a>
+        <a class="atelier-nav-link" data-path="contact" href="contact.html">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-2 sm:gap-3">
+        <button onclick="if(window.IDCraftApp){window.IDCraftApp.openSearch();}else if(window.IDApp){window.IDApp.openSearch();}" aria-label="Search Archive" class="w-9 h-9 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors">
+          <span class="material-symbols-outlined text-[20px]">search</span>
+        </button>
+        <button onclick="if(window.IDCraftApp){window.IDCraftApp.openWishlist();}else if(window.IDApp){window.IDApp.openWishlist();}" aria-label="Wishlist" class="relative w-9 h-9 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors">
+          <span class="material-symbols-outlined text-[20px]">favorite</span>
+          <span class="header-wishlist-badge absolute -top-0.5 -right-0.5 w-4 h-4 bg-tertiary text-on-primary font-label-mono-spec text-[10px] hidden items-center justify-center rounded-full font-bold">0</span>
+        </button>
+        <a href="cart.html" onclick="if(window.IDCraftApp){window.IDCraftApp.openCart(); return false;}else if(window.IDApp){window.IDApp.openCart(); return false;}" aria-label="Bespoke Cart" class="relative w-9 h-9 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors">
+          <span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+          <span class="header-cart-badge cart-badge absolute -top-0.5 -right-0.5 w-4 h-4 bg-primary text-on-primary font-label-mono-spec text-[10px] flex items-center justify-center rounded-full font-bold">0</span>
+        </a>
+        <div class="lang-toggle hidden md:flex items-center text-on-surface-variant font-label-action text-xs tracking-wider px-2.5 py-1 rounded bg-surface-container/60 border border-outline-variant/30 cursor-pointer hover:border-primary/40 transition-colors">
+          <span onclick="window.IDCraftState && window.IDCraftState.setLanguage('en')" class="hover:text-primary transition-colors">EN</span>
+          <span class="px-1.5 opacity-30">|</span>
+          <span onclick="window.IDCraftState && window.IDCraftState.setLanguage('ar')" class="hover:text-primary transition-colors">العربية</span>
+        </div>
+        <a class="hidden sm:inline-flex items-center justify-center px-4 py-2 bg-primary text-on-primary hover:bg-primary-fixed font-label-action text-xs uppercase tracking-[0.14em] rounded font-bold transition-all duration-300 shadow-md" href="custom-order.html">
+          Order Now
+        </a>
+        <a href="account.html" data-action="account" class="w-8 h-8 rounded-full bg-primary/20 border border-primary/40 flex items-center justify-center ml-1 text-primary hover:border-primary transition-colors shadow-sm">
+          <span class="material-symbols-outlined text-[18px]">person</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="w-full pt-20 bg-surface min-h-screen">
+    <div class="flex flex-col w-full">
+
+      <!-- Breadcrumb Bar -->
+      <div class="w-full bg-surface-container-lowest/90 border-b border-outline-variant/30 backdrop-blur-md relative z-10">
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col md:flex-row md:items-center justify-between gap-3">
+          <div class="flex items-center gap-2 font-label-mono-spec text-xs tracking-widest text-on-surface-variant uppercase flex-wrap">
+            <a class="hover:text-primary transition-colors" href="index.html">HOME</a>
+            <span class="opacity-30">/</span>
+            <a class="hover:text-primary transition-colors" href="account.html">CLIENT SERVICES</a>
+            <span class="opacity-30">/</span>
+            <span class="text-primary font-semibold">MY ACCOUNT</span>
+          </div>
+          <div class="flex items-center gap-space-sm font-label-mono-spec text-[11px] tracking-[0.16em] uppercase text-secondary flex-wrap">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-surface-container rounded-full border border-outline-variant/40 text-tertiary">
+              <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+              <span>VERIFIED CLIENT ACCOUNT</span>
+            </span>
+            <span class="hidden sm:inline opacity-30">•</span>
+            <span class="hidden sm:inline text-on-surface-variant">STATE OF KUWAIT</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROFILE HERO SECTION -->
+      <section class="w-full bg-surface-container-lowest border-b border-outline-variant/30 py-10 lg:py-14 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_70%_-20%,rgba(212,175,55,0.06),transparent)] pointer-events-none"></div>
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+            
+            <!-- Left: Profile Identity -->
+            <div class="flex flex-col sm:flex-row sm:items-center gap-6">
+              <!-- Avatar Circle -->
+              <div class="relative shrink-0">
+                <div id="user-avatar" class="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-br from-surface-container-high to-surface-container-low border-2 border-primary/50 text-primary font-headline-xl text-3xl sm:text-4xl font-bold flex items-center justify-center shadow-xl shadow-primary/5">
+                  A
+                </div>
+                <div class="absolute bottom-0 right-0 w-6 h-6 rounded-full bg-primary border-2 border-surface-container-lowest flex items-center justify-center text-on-primary">
+                  <span class="material-symbols-outlined text-[14px]">check</span>
+                </div>
+              </div>
+
+              <!-- Profile Details -->
+              <div class="space-y-1.5">
+                <div class="inline-flex items-center gap-2 font-label-eyebrow text-[11px] text-tertiary uppercase tracking-[0.2em]">
+                  <span>CLIENT PROFILE</span>
+                  <span class="opacity-40">•</span>
+                  <span id="user-tier-badge" class="text-on-surface-variant">PREMIUM MEMBER</span>
+                </div>
+                <h1 class="font-headline-lg text-2xl sm:text-3xl lg:text-4xl text-on-surface font-semibold tracking-tight">
+                  MY ID CRAFT ACCOUNT
+                </h1>
+                <p class="font-body-md text-on-surface-variant">
+                  Manage your profile, orders and custom requests.
+                </p>
+                <div class="pt-2 flex flex-wrap items-center gap-y-2 gap-x-4 text-xs font-label-mono-spec text-on-surface-variant">
+                  <span class="flex items-center gap-1.5 text-on-surface">
+                    <span class="material-symbols-outlined text-primary text-[16px]">person</span>
+                    <strong id="profile-display-name" class="font-semibold text-on-surface">Valued Client</strong>
+                  </span>
+                  <span class="hidden sm:inline opacity-30">•</span>
+                  <span class="flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-primary text-[16px]">mail</span>
+                    <span id="profile-display-email">client@example.com</span>
+                  </span>
+                  <span class="hidden sm:inline opacity-30">•</span>
+                  <span class="flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-primary text-[16px]">call</span>
+                    <span id="profile-display-phone">+965 9000 0000</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Edit Profile Quick Button -->
+            <div class="flex items-center gap-3 shrink-0 self-start sm:self-auto">
+              <button onclick="switchTab('profile')" class="px-5 py-2.5 bg-surface-container hover:bg-surface-container-high text-primary border border-primary/40 hover:border-primary font-label-action text-xs uppercase tracking-[0.14em] rounded transition-all duration-300 shadow-sm flex items-center gap-2 font-semibold">
+                <span class="material-symbols-outlined text-[18px]">edit</span>
+                <span>EDIT PROFILE</span>
+              </button>
+            </div>
+
+          </div>
+
+          <!-- ACCOUNT SUMMARY STATISTICS (3 Compact Editorial Rectangular Blocks) -->
+          <div class="mt-8 pt-8 border-t border-outline-variant/30 grid grid-cols-1 sm:grid-cols-3 gap-4">
+            
+            <div class="bg-surface-container/60 hover:bg-surface-container p-4 sm:p-5 rounded border border-outline-variant/30 transition-colors">
+              <div class="flex items-center justify-between">
+                <span class="font-label-mono-spec text-xs text-on-surface-variant uppercase tracking-widest font-medium">ACTIVE ORDERS</span>
+                <span class="material-symbols-outlined text-primary text-xl">inventory_2</span>
+              </div>
+              <div class="mt-2 flex items-baseline gap-2">
+                <span id="summary-active-orders" class="font-headline-md text-3xl font-bold text-primary">02</span>
+                <span class="font-body-sm text-xs text-on-surface-variant">In Production &amp; QC</span>
+              </div>
+            </div>
+
+            <div class="bg-surface-container/60 hover:bg-surface-container p-4 sm:p-5 rounded border border-outline-variant/30 transition-colors">
+              <div class="flex items-center justify-between">
+                <span class="font-label-mono-spec text-xs text-on-surface-variant uppercase tracking-widest font-medium">COMPLETED ORDERS</span>
+                <span class="material-symbols-outlined text-tertiary text-xl">check_circle</span>
+              </div>
+              <div class="mt-2 flex items-baseline gap-2">
+                <span id="summary-completed-orders" class="font-headline-md text-3xl font-bold text-on-surface">08</span>
+                <span class="font-body-sm text-xs text-on-surface-variant">Delivered &amp; Verified</span>
+              </div>
+            </div>
+
+            <div class="bg-surface-container/60 hover:bg-surface-container p-4 sm:p-5 rounded border border-outline-variant/30 transition-colors">
+              <div class="flex items-center justify-between">
+                <span class="font-label-mono-spec text-xs text-on-surface-variant uppercase tracking-widest font-medium">CUSTOM REQUESTS</span>
+                <span class="material-symbols-outlined text-primary text-xl">design_services</span>
+              </div>
+              <div class="mt-2 flex items-baseline gap-2">
+                <span id="summary-custom-requests" class="font-headline-md text-3xl font-bold text-tertiary">03</span>
+                <span class="font-body-sm text-xs text-on-surface-variant">Review &amp; Approved</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- MAIN DASHBOARD CONTENT (Two-Column Layout) -->
+      <section class="w-full py-10 lg:py-14 bg-surface">
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- LEFT COLUMN: ACCOUNT NAVIGATION (Desktop Sidebar / Mobile Top Ribbon) -->
+            <aside class="lg:col-span-3 w-full">
+              
+              <div class="bg-surface-container-lowest rounded border border-outline-variant/30 p-3 sm:p-4 shadow-xl sticky top-24">
+                
+                <div class="hidden lg:block px-3 py-2 mb-2 border-b border-outline-variant/20">
+                  <span class="font-label-mono-spec text-[11px] uppercase tracking-widest text-on-surface-variant">
+                    ACCOUNT MENU
+                  </span>
+                </div>
+
+                <!-- Navigation List -->
+                <nav class="flex lg:flex-col gap-1 overflow-x-auto lg:overflow-x-visible pb-2 lg:pb-0 scrollbar-none">
+                  
+                  <button onclick="switchTab('overview')" class="account-nav-btn active flex items-center justify-between px-3.5 py-3 rounded text-left font-label-action text-xs uppercase tracking-[0.14em] transition-all whitespace-nowrap w-full" data-tab="overview">
+                    <span class="flex items-center gap-2.5">
+                      <span class="material-symbols-outlined text-[18px]">dashboard</span>
+                      <span>Overview</span>
+                    </span>
+                  </button>
+
+                  <button onclick="switchTab('orders')" class="account-nav-btn flex items-center justify-between px-3.5 py-3 rounded text-left font-label-action text-xs uppercase tracking-[0.14em] text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all whitespace-nowrap w-full" data-tab="orders">
+                    <span class="flex items-center gap-2.5">
+                      <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                      <span>My Orders</span>
+                    </span>
+                    <span id="nav-orders-count" class="px-2 py-0.5 text-[10px] font-label-mono-spec bg-surface-container-high text-primary rounded-full">4</span>
+                  </button>
+
+                  <button onclick="switchTab('custom')" class="account-nav-btn flex items-center justify-between px-3.5 py-3 rounded text-left font-label-action text-xs uppercase tracking-[0.14em] text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all whitespace-nowrap w-full" data-tab="custom">
+                    <span class="flex items-center gap-2.5">
+                      <span class="material-symbols-outlined text-[18px]">design_services</span>
+                      <span>Custom Orders</span>
+                    </span>
+                    <span id="nav-custom-count" class="px-2 py-0.5 text-[10px] font-label-mono-spec bg-surface-container-high text-tertiary rounded-full">3</span>
+                  </button>
+
+                  <button onclick="switchTab('saved')" class="account-nav-btn flex items-center justify-between px-3.5 py-3 rounded text-left font-label-action text-xs uppercase tracking-[0.14em] text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all whitespace-nowrap w-full" data-tab="saved">
+                    <span class="flex items-center gap-2.5">
+                      <span class="material-symbols-outlined text-[18px]">folder_open</span>
+                      <span>Saved Designs</span>
+                    </span>
+                    <span id="nav-saved-count" class="px-2 py-0.5 text-[10px] font-label-mono-spec bg-surface-container-high text-on-surface-variant rounded-full">3</span>
+                  </button>
+
+                  <button onclick="switchTab('profile')" class="account-nav-btn flex items-center justify-between px-3.5 py-3 rounded text-left font-label-action text-xs uppercase tracking-[0.14em] text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all whitespace-nowrap w-full" data-tab="profile">
+                    <span class="flex items-center gap-2.5">
+                      <span class="material-symbols-outlined text-[18px]">person</span>
+                      <span>Personal Info</span>
+                    </span>
+                  </button>
+
+                  <button onclick="switchTab('addresses')" class="account-nav-btn flex items-center justify-between px-3.5 py-3 rounded text-left font-label-action text-xs uppercase tracking-[0.14em] text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all whitespace-nowrap w-full" data-tab="addresses">
+                    <span class="flex items-center gap-2.5">
+                      <span class="material-symbols-outlined text-[18px]">location_on</span>
+                      <span>Addresses</span>
+                    </span>
+                  </button>
+
+                  <button onclick="switchTab('settings')" class="account-nav-btn flex items-center justify-between px-3.5 py-3 rounded text-left font-label-action text-xs uppercase tracking-[0.14em] text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all whitespace-nowrap w-full" data-tab="settings">
+                    <span class="flex items-center gap-2.5">
+                      <span class="material-symbols-outlined text-[18px]">settings</span>
+                      <span>Settings</span>
+                    </span>
+                  </button>
+
+                  <div class="my-2 border-t border-outline-variant/20 hidden lg:block"></div>
+
+                  <!-- Sign Out Button -->
+                  <button onclick="openSignOutModal()" class="flex items-center gap-2.5 px-3.5 py-3 rounded text-left font-label-action text-xs uppercase tracking-[0.14em] text-error hover:bg-error/10 transition-all whitespace-nowrap w-full">
+                    <span class="material-symbols-outlined text-[18px]">logout</span>
+                    <span>Sign Out</span>
+                  </button>
+
+                </nav>
+
+              </div>
+
+            </aside>
+
+            <!-- RIGHT COLUMN: DYNAMIC TAB PANELS -->
+            <div class="lg:col-span-9 w-full space-y-8">
+              
+              <!-- ======================================================== -->
+              <!-- 1. TAB: OVERVIEW -->
+              <!-- ======================================================== -->
+              <div id="tab-overview" class="tab-panel space-y-8">
+                
+                <!-- Recent Orders Block -->
+                <div class="bg-surface-container-lowest rounded border border-outline-variant/30 p-6 shadow-xl space-y-6">
+                  <div class="flex items-center justify-between pb-4 border-b border-outline-variant/20">
+                    <div>
+                      <h2 class="font-headline-md text-xl font-semibold text-on-surface uppercase tracking-wide">
+                        RECENT ORDERS
+                      </h2>
+                      <p class="font-body-sm text-xs text-on-surface-variant mt-0.5">
+                        Your latest customized hardware and identity commissions.
+                      </p>
+                    </div>
+                    <button onclick="switchTab('orders')" class="font-label-action text-xs uppercase tracking-[0.14em] text-primary hover:text-primary-fixed-dim inline-flex items-center gap-1 font-semibold group">
+                      <span>VIEW ALL</span>
+                      <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </button>
+                  </div>
+
+                  <!-- Recent Orders Container -->
+                  <div id="recent-orders-list" class="space-y-4">
+                    <!-- Populated dynamically via JS -->
+                  </div>
+                </div>
+
+                <!-- Custom Requests Block -->
+                <div class="bg-surface-container-lowest rounded border border-outline-variant/30 p-6 shadow-xl space-y-6">
+                  <div class="flex items-center justify-between pb-4 border-b border-outline-variant/20">
+                    <div>
+                      <h2 class="font-headline-md text-xl font-semibold text-on-surface uppercase tracking-wide">
+                        CUSTOM REQUESTS
+                      </h2>
+                      <p class="font-body-sm text-xs text-on-surface-variant mt-0.5">
+                        Track submitted customization and volume bespoke inquiries.
+                      </p>
+                    </div>
+                    <button onclick="switchTab('custom')" class="font-label-action text-xs uppercase tracking-[0.14em] text-primary hover:text-primary-fixed-dim inline-flex items-center gap-1 font-semibold group">
+                      <span>VIEW ALL</span>
+                      <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </button>
+                  </div>
+
+                  <!-- Recent Custom Requests Container -->
+                  <div id="recent-custom-requests-list" class="space-y-4">
+                    <!-- Populated dynamically via JS -->
+                  </div>
+                </div>
+
+                <!-- Quick Actions Section -->
+                <div class="bg-surface-container-lowest rounded border border-outline-variant/30 p-6 shadow-xl space-y-4">
+                  <h2 class="font-headline-sm text-lg font-semibold text-on-surface uppercase tracking-wide">
+                    QUICK ACTIONS
+                  </h2>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 pt-2">
+                    <a href="custom-order.html" class="p-4 rounded bg-surface-container hover:bg-surface-container-high border border-outline-variant/30 hover:border-primary/40 text-center transition-all group flex flex-col items-center justify-center gap-2">
+                      <span class="material-symbols-outlined text-primary text-2xl group-hover:scale-110 transition-transform">add_circle</span>
+                      <span class="font-label-action text-xs font-semibold uppercase tracking-wider text-on-surface">START CUSTOM ORDER</span>
+                    </a>
+                    <a href="track-order.html" class="p-4 rounded bg-surface-container hover:bg-surface-container-high border border-outline-variant/30 hover:border-primary/40 text-center transition-all group flex flex-col items-center justify-center gap-2">
+                      <span class="material-symbols-outlined text-primary text-2xl group-hover:scale-110 transition-transform">local_shipping</span>
+                      <span class="font-label-action text-xs font-semibold uppercase tracking-wider text-on-surface">TRACK AN ORDER</span>
+                    </a>
+                    <a href="shop.html" class="p-4 rounded bg-surface-container hover:bg-surface-container-high border border-outline-variant/30 hover:border-primary/40 text-center transition-all group flex flex-col items-center justify-center gap-2">
+                      <span class="material-symbols-outlined text-primary text-2xl group-hover:scale-110 transition-transform">storefront</span>
+                      <span class="font-label-action text-xs font-semibold uppercase tracking-wider text-on-surface">VIEW SHOP</span>
+                    </a>
+                    <a href="contact.html" class="p-4 rounded bg-surface-container hover:bg-surface-container-high border border-outline-variant/30 hover:border-primary/40 text-center transition-all group flex flex-col items-center justify-center gap-2">
+                      <span class="material-symbols-outlined text-primary text-2xl group-hover:scale-110 transition-transform">mail</span>
+                      <span class="font-label-action text-xs font-semibold uppercase tracking-wider text-on-surface">CONTACT ID CRAFT</span>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- ======================================================== -->
+              <!-- 2. TAB: MY ORDERS -->
+              <!-- ======================================================== -->
+              <div id="tab-orders" class="tab-panel hidden space-y-6">
+                
+                <div class="bg-surface-container-lowest rounded border border-outline-variant/30 p-6 shadow-xl space-y-6">
+                  
+                  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-outline-variant/20">
+                    <div>
+                      <h2 class="font-headline-md text-xl font-semibold text-on-surface uppercase tracking-wide">
+                        MY ORDERS
+                      </h2>
+                      <p class="font-body-sm text-xs text-on-surface-variant mt-0.5">
+                        Inspect all your previous and active orders.
+                      </p>
+                    </div>
+
+                    <!-- Filter Buttons -->
+                    <div class="flex items-center gap-1.5 p-1 bg-surface-container rounded border border-outline-variant/30 self-start sm:self-auto">
+                      <button onclick="filterOrders('ALL')" class="order-filter-btn active px-3 py-1.5 rounded font-label-action text-xs uppercase tracking-wider font-semibold" data-filter="ALL">
+                        ALL
+                      </button>
+                      <button onclick="filterOrders('ACTIVE')" class="order-filter-btn px-3 py-1.5 rounded font-label-action text-xs uppercase tracking-wider text-on-surface-variant hover:text-on-surface font-semibold" data-filter="ACTIVE">
+                        ACTIVE
+                      </button>
+                      <button onclick="filterOrders('COMPLETED')" class="order-filter-btn px-3 py-1.5 rounded font-label-action text-xs uppercase tracking-wider text-on-surface-variant hover:text-on-surface font-semibold" data-filter="COMPLETED">
+                        COMPLETED
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Full Orders List Container -->
+                  <div id="all-orders-list" class="space-y-4">
+                    <!-- Populated dynamically via JS -->
+                  </div>
+
+                </div>
+
+              </div>
+
+              <!-- ======================================================== -->
+              <!-- 3. TAB: CUSTOM ORDERS -->
+              <!-- ======================================================== -->
+              <div id="tab-custom" class="tab-panel hidden space-y-6">
+                
+                <div class="bg-surface-container-lowest rounded border border-outline-variant/30 p-6 shadow-xl space-y-6">
+                  
+                  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-outline-variant/20">
+                    <div>
+                      <h2 class="font-headline-md text-xl font-semibold text-on-surface uppercase tracking-wide">
+                        CUSTOM ORDERS &amp; INQUIRIES
+                      </h2>
+                      <p class="font-body-sm text-xs text-on-surface-variant mt-0.5">
+                        Track bespoke quote requests and specialty identity fabrication.
+                      </p>
+                    </div>
+                    <a href="custom-order.html" class="px-4 py-2 bg-primary text-on-primary font-label-action text-xs uppercase tracking-[0.14em] rounded hover:bg-primary-fixed transition-all font-semibold flex items-center gap-1.5 self-start sm:self-auto">
+                      <span class="material-symbols-outlined text-[16px]">add</span>
+                      <span>NEW CUSTOM ORDER</span>
+                    </a>
+                  </div>
+
+                  <!-- Full Custom Requests Container -->
+                  <div id="all-custom-requests-list" class="space-y-4">
+                    <!-- Populated dynamically via JS -->
+                  </div>
+
+                </div>
+
+              </div>
+
+              <!-- ======================================================== -->
+              <!-- 4. TAB: SAVED DESIGNS -->
+              <!-- ======================================================== -->
+              <div id="tab-saved" class="tab-panel hidden space-y-6">
+                
+                <div class="bg-surface-container-lowest rounded border border-outline-variant/30 p-6 shadow-xl space-y-6">
+                  
+                  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-outline-variant/20">
+                    <div>
+                      <h2 class="font-headline-md text-xl font-semibold text-on-surface uppercase tracking-wide">
+                        SAVED DESIGNS &amp; ARTWORK
+                      </h2>
+                      <p class="font-body-sm text-xs text-on-surface-variant mt-0.5">
+                        Your uploaded emblems, monogram vectors, and custom artwork templates.
+                      </p>
+                    </div>
+                    <a href="custom-order.html" class="px-4 py-2 bg-surface-container hover:bg-surface-container-high text-primary border border-primary/40 font-label-action text-xs uppercase tracking-[0.14em] rounded transition-all font-semibold flex items-center gap-1.5 self-start sm:self-auto">
+                      <span class="material-symbols-outlined text-[16px]">upload</span>
+                      <span>UPLOAD NEW DESIGN</span>
+                    </a>
+                  </div>
+
+                  <!-- Saved Designs Grid -->
+                  <div id="saved-designs-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <!-- Populated dynamically via JS -->
+                  </div>
+
+                </div>
+
+              </div>
+
+              <!-- ======================================================== -->
+              <!-- 5. TAB: PERSONAL INFORMATION -->
+              <!-- ======================================================== -->
+              <div id="tab-profile" class="tab-panel hidden space-y-6">
+                
+                <div class="bg-surface-container-lowest rounded border border-outline-variant/30 p-6 sm:p-8 shadow-xl space-y-6">
+                  
+                  <div class="pb-4 border-b border-outline-variant/20">
+                    <h2 class="font-headline-md text-xl font-semibold text-on-surface uppercase tracking-wide">
+                      PERSONAL INFORMATION
+                    </h2>
+                    <p class="font-body-sm text-xs text-on-surface-variant mt-0.5">
+                      Update your account contact information and company details.
+                    </p>
+                  </div>
+
+                  <form id="profile-form" onsubmit="handleProfileSubmit(event)" class="space-y-6">
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                      
+                      <!-- Full Name -->
+                      <div class="space-y-2">
+                        <label for="input-fullname" class="block font-label-mono-spec text-xs uppercase tracking-wider text-on-surface-variant font-medium">
+                          FULL NAME <span class="text-primary">*</span>
+                        </label>
+                        <input id="input-fullname" type="text" required class="w-full px-4 py-3 bg-surface-container rounded border border-outline-variant/40 focus:border-primary focus:ring-1 focus:ring-primary text-on-surface font-body-md text-sm outline-none transition-all"/>
+                      </div>
+
+                      <!-- Email Address -->
+                      <div class="space-y-2">
+                        <label for="input-email" class="block font-label-mono-spec text-xs uppercase tracking-wider text-on-surface-variant font-medium">
+                          EMAIL ADDRESS <span class="text-primary">*</span>
+                        </label>
+                        <input id="input-email" type="email" required class="w-full px-4 py-3 bg-surface-container rounded border border-outline-variant/40 focus:border-primary focus:ring-1 focus:ring-primary text-on-surface font-body-md text-sm outline-none transition-all"/>
+                      </div>
+
+                      <!-- Phone Number -->
+                      <div class="space-y-2">
+                        <label for="input-phone" class="block font-label-mono-spec text-xs uppercase tracking-wider text-on-surface-variant font-medium">
+                          PHONE NUMBER <span class="text-primary">*</span>
+                        </label>
+                        <input id="input-phone" type="tel" required class="w-full px-4 py-3 bg-surface-container rounded border border-outline-variant/40 focus:border-primary focus:ring-1 focus:ring-primary text-on-surface font-body-md text-sm outline-none transition-all"/>
+                      </div>
+
+                      <!-- Company / Organization (Optional) -->
+                      <div class="space-y-2">
+                        <label for="input-company" class="block font-label-mono-spec text-xs uppercase tracking-wider text-on-surface-variant font-medium">
+                          COMPANY / ORGANIZATION (OPTIONAL)
+                        </label>
+                        <input id="input-company" type="text" placeholder="e.g. Vanguard Capital Kuwait" class="w-full px-4 py-3 bg-surface-container rounded border border-outline-variant/40 focus:border-primary focus:ring-1 focus:ring-primary text-on-surface font-body-md text-sm outline-none transition-all"/>
+                      </div>
+
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="pt-4 flex items-center justify-between border-t border-outline-variant/20">
+                      <div id="profile-feedback" class="text-xs font-label-mono-spec text-primary hidden">
+                        ✓ Profile updated successfully
+                      </div>
+                      <button type="submit" class="ml-auto px-6 py-3 bg-primary text-on-primary hover:bg-primary-fixed font-label-action text-xs uppercase tracking-[0.14em] rounded font-semibold transition-all shadow-md flex items-center gap-2">
+                        <span class="material-symbols-outlined text-[18px]">save</span>
+                        <span>SAVE CHANGES</span>
+                      </button>
+                    </div>
+
+                  </form>
+
+                </div>
+
+              </div>
+
+              <!-- ======================================================== -->
+              <!-- 6. TAB: ADDRESSES -->
+              <!-- ======================================================== -->
+              <div id="tab-addresses" class="tab-panel hidden space-y-6">
+                
+                <div class="bg-surface-container-lowest rounded border border-outline-variant/30 p-6 shadow-xl space-y-6">
+                  
+                  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-outline-variant/20">
+                    <div>
+                      <h2 class="font-headline-md text-xl font-semibold text-on-surface uppercase tracking-wide">
+                        DELIVERY ADDRESSES
+                      </h2>
+                      <p class="font-body-sm text-xs text-on-surface-variant mt-0.5">
+                        Manage your shipping destinations in Kuwait and GCC.
+                      </p>
+                    </div>
+                    <button onclick="openAddressModal()" class="px-4 py-2 bg-primary text-on-primary font-label-action text-xs uppercase tracking-[0.14em] rounded hover:bg-primary-fixed transition-all font-semibold flex items-center gap-1.5 self-start sm:self-auto">
+                      <span class="material-symbols-outlined text-[16px]">add</span>
+                      <span>ADD ADDRESS</span>
+                    </button>
+                  </div>
+
+                  <!-- Addresses Grid Container -->
+                  <div id="addresses-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Populated dynamically via JS -->
+                  </div>
+
+                </div>
+
+              </div>
+
+              <!-- ======================================================== -->
+              <!-- 7. TAB: SETTINGS -->
+              <!-- ======================================================== -->
+              <div id="tab-settings" class="tab-panel hidden space-y-6">
+                
+                <div class="bg-surface-container-lowest rounded border border-outline-variant/30 p-6 sm:p-8 shadow-xl space-y-8">
+                  
+                  <!-- Notifications Section -->
+                  <div class="space-y-4">
+                    <div class="pb-3 border-b border-outline-variant/20">
+                      <h2 class="font-headline-md text-xl font-semibold text-on-surface uppercase tracking-wide">
+                        ACCOUNT SETTINGS &amp; PREFERENCES
+                      </h2>
+                      <p class="font-body-sm text-xs text-on-surface-variant mt-0.5">
+                        Configure notifications and order status alerts.
+                      </p>
+                    </div>
+
+                    <div class="space-y-4 pt-2">
+                      
+                      <!-- Email Notifications -->
+                      <div class="flex items-center justify-between p-4 rounded bg-surface-container border border-outline-variant/30">
+                        <div class="space-y-0.5">
+                          <span class="font-label-action text-xs font-semibold uppercase text-on-surface tracking-wide">Email Notifications</span>
+                          <p class="font-body-sm text-xs text-on-surface-variant">Receive invoices, design proofs, and account updates via email.</p>
+                        </div>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                          <input type="checkbox" id="setting-email" checked onchange="handleSettingChange('emailNotifications', this.checked)" class="sr-only peer"/>
+                          <div class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:width-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+                        </label>
+                      </div>
+
+                      <!-- Order Updates via SMS -->
+                      <div class="flex items-center justify-between p-4 rounded bg-surface-container border border-outline-variant/30">
+                        <div class="space-y-0.5">
+                          <span class="font-label-action text-xs font-semibold uppercase text-on-surface tracking-wide">SMS Order Updates</span>
+                          <p class="font-body-sm text-xs text-on-surface-variant">Receive dispatch notifications and delivery courier PIN on your mobile.</p>
+                        </div>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                          <input type="checkbox" id="setting-sms" checked onchange="handleSettingChange('orderUpdates', this.checked)" class="sr-only peer"/>
+                          <div class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:width-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+                        </label>
+                      </div>
+
+                      <!-- WhatsApp Updates -->
+                      <div class="flex items-center justify-between p-4 rounded bg-surface-container border border-outline-variant/30">
+                        <div class="space-y-0.5">
+                          <span class="font-label-action text-xs font-semibold uppercase text-on-surface tracking-wide">WhatsApp Updates</span>
+                          <p class="font-body-sm text-xs text-on-surface-variant">Receive instant mockup previews and direct concierge communication.</p>
+                        </div>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                          <input type="checkbox" id="setting-whatsapp" checked onchange="handleSettingChange('whatsappUpdates', this.checked)" class="sr-only peer"/>
+                          <div class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:width-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+                        </label>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <!-- Language Preference -->
+                  <div class="space-y-3 pt-4 border-t border-outline-variant/20">
+                    <h3 class="font-label-action text-xs font-semibold uppercase text-on-surface tracking-wider">
+                      LANGUAGE PREFERENCE
+                    </h3>
+                    <div class="flex items-center gap-3">
+                      <button onclick="setAccountLang('EN')" id="lang-btn-en" class="px-4 py-2 rounded font-label-action text-xs uppercase tracking-wider font-semibold bg-primary text-on-primary transition-all">
+                        English (EN)
+                      </button>
+                      <button onclick="setAccountLang('AR')" id="lang-btn-ar" class="px-4 py-2 rounded font-label-action text-xs uppercase tracking-wider font-semibold bg-surface-container text-on-surface-variant hover:text-on-surface transition-all">
+                        العربية (AR)
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Change Password Section -->
+                  <div class="space-y-4 pt-4 border-t border-outline-variant/20">
+                    <h3 class="font-label-action text-xs font-semibold uppercase text-on-surface tracking-wider">
+                      CHANGE PASSWORD
+                    </h3>
+                    <form onsubmit="handlePasswordChange(event)" class="space-y-4 max-w-lg">
+                      <div class="space-y-1.5">
+                        <label class="block font-label-mono-spec text-xs uppercase text-on-surface-variant">CURRENT PASSWORD</label>
+                        <input type="password" required class="w-full px-4 py-2.5 bg-surface-container rounded border border-outline-variant/40 focus:border-primary text-on-surface text-sm outline-none"/>
+                      </div>
+                      <div class="space-y-1.5">
+                        <label class="block font-label-mono-spec text-xs uppercase text-on-surface-variant">NEW PASSWORD</label>
+                        <input type="password" required class="w-full px-4 py-2.5 bg-surface-container rounded border border-outline-variant/40 focus:border-primary text-on-surface text-sm outline-none"/>
+                      </div>
+                      <div class="space-y-1.5">
+                        <label class="block font-label-mono-spec text-xs uppercase text-on-surface-variant">CONFIRM NEW PASSWORD</label>
+                        <input type="password" required class="w-full px-4 py-2.5 bg-surface-container rounded border border-outline-variant/40 focus:border-primary text-on-surface text-sm outline-none"/>
+                      </div>
+                      <div class="pt-2">
+                        <button type="submit" class="px-5 py-2.5 bg-surface-container hover:bg-surface-container-high text-primary border border-primary/40 font-label-action text-xs uppercase tracking-wider rounded font-semibold transition-all">
+                          UPDATE PASSWORD
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ======================================================== -->
+  <!-- MODALS & DRAWERS -->
+  <!-- ======================================================== -->
+
+  <!-- 1. ORDER DETAILS MODAL -->
+  <div id="modal-order-details" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-surface-container-lowest border border-outline-variant/40 rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 space-y-6 shadow-2xl">
+      <div class="flex items-center justify-between pb-4 border-b border-outline-variant/20">
+        <div class="space-y-1">
+          <div class="flex items-center gap-2">
+            <span id="modal-order-id" class="font-label-action text-primary font-bold uppercase tracking-wider text-base">ORDER #IDC-1024</span>
+            <span id="modal-order-status" class="px-2.5 py-0.5 rounded text-[11px] font-label-mono-spec uppercase font-semibold bg-primary/10 text-primary border border-primary/30">DESIGN APPROVED</span>
+          </div>
+          <p id="modal-order-date" class="font-body-sm text-xs text-on-surface-variant">Placed on Sep 14, 2026</p>
+        </div>
+        <button onclick="closeOrderModal()" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+
+      <!-- Itemized Products -->
+      <div class="space-y-3">
+        <h4 class="font-label-mono-spec text-xs uppercase tracking-widest text-on-surface-variant">ORDER ITEMS</h4>
+        <div id="modal-order-items" class="space-y-3">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+
+      <!-- Financial Breakdown -->
+      <div class="p-4 rounded bg-surface-container border border-outline-variant/30 space-y-2 font-body-sm text-xs">
+        <div class="flex justify-between text-on-surface-variant">
+          <span>Subtotal</span>
+          <span id="modal-order-subtotal" class="font-mono text-on-surface">325.000 KWD</span>
+        </div>
+        <div class="flex justify-between text-on-surface-variant">
+          <span>Shipping</span>
+          <span id="modal-order-shipping" class="font-mono text-primary font-semibold">Complimentary</span>
+        </div>
+        <div class="pt-2 border-t border-outline-variant/20 flex justify-between font-bold text-sm text-on-surface">
+          <span>Total</span>
+          <span id="modal-order-total" class="font-mono text-primary text-base">325.000 KWD</span>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="pt-2 flex items-center justify-between gap-3">
+        <a id="modal-track-link" href="track-order.html" class="flex-1 py-2.5 bg-primary text-on-primary font-label-action text-xs uppercase tracking-wider rounded text-center font-bold hover:bg-primary-fixed transition-colors">
+          TRACK ORDER
+        </a>
+        <button onclick="closeOrderModal()" class="px-5 py-2.5 bg-surface-container text-on-surface-variant hover:text-on-surface font-label-action text-xs uppercase tracking-wider rounded transition-colors font-semibold">
+          CLOSE
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. CUSTOM REQUEST DETAILS MODAL -->
+  <div id="modal-custom-details" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-surface-container-lowest border border-outline-variant/40 rounded-lg max-w-lg w-full p-6 space-y-6 shadow-2xl">
+      <div class="flex items-center justify-between pb-4 border-b border-outline-variant/20">
+        <div class="space-y-1">
+          <span id="modal-req-code" class="font-label-action text-tertiary font-bold uppercase tracking-wider text-base">REQUEST #CR-018</span>
+          <p id="modal-req-date" class="font-body-sm text-xs text-on-surface-variant">Submitted on Sep 16, 2026</p>
+        </div>
+        <button onclick="closeCustomModal()" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+
+      <div class="space-y-3 font-body-sm text-sm">
+        <div class="flex justify-between pb-2 border-b border-outline-variant/20">
+          <span class="text-on-surface-variant">Product</span>
+          <span id="modal-req-product" class="font-semibold text-on-surface">Corporate Lanyards</span>
+        </div>
+        <div class="flex justify-between pb-2 border-b border-outline-variant/20">
+          <span class="text-on-surface-variant">Quantity</span>
+          <span id="modal-req-qty" class="font-semibold text-on-surface">100 units</span>
+        </div>
+        <div class="flex justify-between pb-2 border-b border-outline-variant/20">
+          <span class="text-on-surface-variant">Status</span>
+          <span id="modal-req-status" class="px-2 py-0.5 rounded text-[11px] font-label-mono-spec uppercase bg-tertiary/10 text-tertiary border border-tertiary/30">DESIGN REVIEW</span>
+        </div>
+        <div class="space-y-1 pt-1">
+          <span class="text-on-surface-variant block text-xs font-label-mono-spec uppercase">Requirements &amp; Details:</span>
+          <p id="modal-req-details" class="p-3 bg-surface-container rounded text-xs text-on-surface leading-relaxed">
+            Custom midnight obsidian lanyard with champagne gold metallic threading and laser-engraved monogram clip.
+          </p>
+        </div>
+      </div>
+
+      <div class="pt-2 flex items-center justify-end">
+        <button onclick="closeCustomModal()" class="px-5 py-2.5 bg-surface-container text-primary font-label-action text-xs uppercase tracking-wider rounded hover:bg-surface-container-high transition-colors font-semibold">
+          DONE
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. ADD / EDIT ADDRESS MODAL -->
+  <div id="modal-address" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-surface-container-lowest border border-outline-variant/40 rounded-lg max-w-lg w-full p-6 space-y-6 shadow-2xl">
+      <div class="flex items-center justify-between pb-4 border-b border-outline-variant/20">
+        <h3 id="modal-address-title" class="font-headline-md text-lg font-semibold text-on-surface uppercase">
+          ADD NEW ADDRESS
+        </h3>
+        <button onclick="closeAddressModal()" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+
+      <form id="address-form" onsubmit="handleAddressSubmit(event)" class="space-y-4">
+        <input type="hidden" id="addr-id" value=""/>
+        
+        <div class="space-y-1">
+          <label class="block font-label-mono-spec text-xs uppercase text-on-surface-variant">ADDRESS TITLE (e.g. Office / Home)</label>
+          <input id="addr-title" type="text" required placeholder="Corporate Headquarters" class="w-full px-4 py-2.5 bg-surface-container rounded border border-outline-variant/40 focus:border-primary text-on-surface text-sm outline-none"/>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div class="space-y-1">
+            <label class="block font-label-mono-spec text-xs uppercase text-on-surface-variant">FULL NAME</label>
+            <input id="addr-name" type="text" required class="w-full px-4 py-2.5 bg-surface-container rounded border border-outline-variant/40 focus:border-primary text-on-surface text-sm outline-none"/>
+          </div>
+          <div class="space-y-1">
+            <label class="block font-label-mono-spec text-xs uppercase text-on-surface-variant">PHONE NUMBER</label>
+            <input id="addr-phone" type="tel" required class="w-full px-4 py-2.5 bg-surface-container rounded border border-outline-variant/40 focus:border-primary text-on-surface text-sm outline-none"/>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div class="space-y-1">
+            <label class="block font-label-mono-spec text-xs uppercase text-on-surface-variant">CITY</label>
+            <input id="addr-city" type="text" required value="Kuwait City" class="w-full px-4 py-2.5 bg-surface-container rounded border border-outline-variant/40 focus:border-primary text-on-surface text-sm outline-none"/>
+          </div>
+          <div class="space-y-1">
+            <label class="block font-label-mono-spec text-xs uppercase text-on-surface-variant">AREA / DISTRICT</label>
+            <input id="addr-area" type="text" required placeholder="Shuwaikh / Sharq" class="w-full px-4 py-2.5 bg-surface-container rounded border border-outline-variant/40 focus:border-primary text-on-surface text-sm outline-none"/>
+          </div>
+        </div>
+
+        <div class="space-y-1">
+          <label class="block font-label-mono-spec text-xs uppercase text-on-surface-variant">STREET, BUILDING &amp; FLOOR</label>
+          <input id="addr-street" type="text" required placeholder="Street 12, Tower 4, Level 10" class="w-full px-4 py-2.5 bg-surface-container rounded border border-outline-variant/40 focus:border-primary text-on-surface text-sm outline-none"/>
+        </div>
+
+        <div class="flex items-center gap-2 pt-1">
+          <input type="checkbox" id="addr-default" class="rounded bg-surface-container border-outline-variant/40 text-primary focus:ring-primary"/>
+          <label for="addr-default" class="font-body-sm text-xs text-on-surface-variant cursor-pointer">Set as default delivery address</label>
+        </div>
+
+        <div class="pt-4 flex items-center justify-end gap-3 border-t border-outline-variant/20">
+          <button type="button" onclick="closeAddressModal()" class="px-4 py-2 bg-surface-container text-on-surface-variant font-label-action text-xs uppercase tracking-wider rounded font-semibold">
+            CANCEL
+          </button>
+          <button type="submit" class="px-5 py-2 bg-primary text-on-primary font-label-action text-xs uppercase tracking-wider rounded font-semibold hover:bg-primary-fixed transition-colors">
+            SAVE ADDRESS
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 4. SIGN OUT CONFIRMATION MODAL -->
+  <div id="modal-signout" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-surface-container-lowest border border-outline-variant/40 rounded-lg max-w-sm w-full p-6 space-y-5 shadow-2xl text-center">
+      <div class="w-12 h-12 rounded-full bg-error/10 text-error flex items-center justify-center mx-auto">
+        <span class="material-symbols-outlined text-2xl">logout</span>
+      </div>
+      <div class="space-y-1">
+        <h3 class="font-headline-sm text-lg font-semibold text-on-surface uppercase">SIGN OUT</h3>
+        <p class="font-body-sm text-xs text-on-surface-variant">Are you sure you want to sign out of your ID CRAFT account?</p>
+      </div>
+      <div class="flex items-center justify-center gap-3 pt-2">
+        <button onclick="closeSignOutModal()" class="px-4 py-2 bg-surface-container text-on-surface-variant font-label-action text-xs uppercase tracking-wider rounded font-semibold">
+          CANCEL
+        </button>
+        <button onclick="confirmSignOut()" class="px-5 py-2 bg-error text-white font-label-action text-xs uppercase tracking-wider rounded font-semibold hover:bg-error/80 transition-colors">
+          SIGN OUT
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30 py-12 lg:py-16 text-on-surface-variant">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <img alt="ID CRAFT" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WQuwLIdSGZ0krsGOhlWCpQj3_eEfPT6j2SmeVRt7W5OpQk0CStqANVQ_rfZsNUScsNGklGnqUi-N_-tZjfrbsYXs5Ydc6VOaTbCyIP47T6myPegKapAUxoPavmO8WmwDdp7hM6ez4oDJxm1-o12b-h0tdYOm0qemnVx-geYmPWN62wzpHXP0-9ZQMGb9_BCdnZ5KsZq96_-UAdIDarDaP7UR-_kakLArn9Cxwi1B8MvUXWJWKaWFLXZkA"/>
+            <div class="border-l border-outline-variant/40 pl-3">
+              <span class="font-label-action text-xs font-bold uppercase tracking-widest text-on-surface block">ID CRAFT</span>
+              <span class="font-label-mono-spec text-[10px] tracking-widest uppercase text-tertiary block">Kuwait Atelier</span>
+            </div>
+          </div>
+          <p class="font-body-md text-xs text-on-surface-variant max-w-sm leading-relaxed">
+            Engineered precision identity hardware, custom RFID smart passes, executive lanyards, and laser-engraved merchandise crafted in Shuwaikh, Kuwait.
+          </p>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="font-label-action text-xs font-bold uppercase tracking-widest text-on-surface">COLLECTION</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="product-id-cards.html" class="hover:text-primary transition-colors">Custom ID Cards</a></li>
+            <li><a href="product-lanyards.html" class="hover:text-primary transition-colors">Executive Lanyards</a></li>
+            <li><a href="product-badge-reels.html" class="hover:text-primary transition-colors">Badge Reels</a></li>
+            <li><a href="product-card-holders.html" class="hover:text-primary transition-colors">Card Holders</a></li>
+            <li><a href="product-tumblers.html" class="hover:text-primary transition-colors">Architectural Tumblers</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="font-label-action text-xs font-bold uppercase tracking-widest text-on-surface">SERVICES</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="custom-order.html" class="hover:text-primary transition-colors">Custom Order Studio</a></li>
+            <li><a href="corporate.html" class="hover:text-primary transition-colors">Corporate Commissions</a></li>
+            <li><a href="track-order.html" class="hover:text-primary transition-colors">Order Tracking</a></li>
+            <li><a href="account.html" class="hover:text-primary transition-colors">Client Account</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="font-label-action text-xs font-bold uppercase tracking-widest text-on-surface">CONTACT</h4>
+          <p class="text-xs">Shuwaikh Industrial Area, Kuwait</p>
+          <p class="text-xs font-mono text-primary">+965 9876 5432</p>
+          <p class="text-xs">info@idcraft.kw</p>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-outline-variant/20 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-label-mono-spec">
+        <span>&copy; 2026 ID CRAFT. All Rights Reserved.</span>
+        <div class="flex items-center gap-4">
+          <a href="about.html" class="hover:text-primary transition-colors">About</a>
+          <span>•</span>
+          <a href="contact.html" class="hover:text-primary transition-colors">Contact</a>
+          <span>•</span>
+          <a href="custom-order.html" class="hover:text-primary transition-colors">Custom Studio</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT STATE & DASHBOARD CONTROLLER -->
+  <script src="js/state.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    // DASHBOARD APPLICATION LOGIC
+    let currentFilter = 'ALL';
+
+    function initAccountDashboard() {
+      const user = window.IDCraftState ? window.IDCraftState.getCurrentUser() : null;
+      if (user) {
+        renderUserProfile(user);
+      }
+
+      renderSummaryCounts();
+      renderRecentOrders();
+      renderAllOrders();
+      renderRecentCustomRequests();
+      renderAllCustomRequests();
+      renderSavedDesigns();
+      renderAddresses();
+      loadSettings();
+
+      // Handle Hash Routing (e.g. #orders, #custom, #saved, #profile, #addresses, #settings)
+      handleHashRouting();
+      window.addEventListener('hashchange', handleHashRouting);
+    }
+
+    function handleHashRouting() {
+      const hash = window.location.hash.replace('#', '');
+      const validTabs = ['overview', 'orders', 'custom', 'saved', 'profile', 'addresses', 'settings'];
+      if (validTabs.includes(hash)) {
+        switchTab(hash, false);
+      }
+    }
+
+    function switchTab(tabId, updateHash = true) {
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.add('hidden'));
+      document.querySelectorAll('.account-nav-btn').forEach(btn => {
+        btn.classList.remove('active', 'bg-primary-container', 'text-on-primary-container', 'font-semibold');
+        btn.classList.add('text-on-surface-variant');
+      });
+
+      const targetPanel = document.getElementById('tab-' + tabId);
+      const targetBtn = document.querySelector(`.account-nav-btn[data-tab="${tabId}"]`);
+
+      if (targetPanel) targetPanel.classList.remove('hidden');
+      if (targetBtn) {
+        targetBtn.classList.add('active', 'bg-primary-container', 'text-on-primary-container', 'font-semibold');
+        targetBtn.classList.remove('text-on-surface-variant');
+      }
+
+      if (updateHash) {
+        history.replaceState(null, null, '#' + tabId);
+      }
+
+      window.scrollTo({ top: 200, behavior: 'smooth' });
+    }
+
+    function renderUserProfile(user) {
+      const name = user.fullName || 'Valued Client';
+      const email = user.email || 'client@example.com';
+      const phone = user.phone || '+965 0000 0000';
+      const company = user.company || '';
+      const initial = user.avatarInitial || name.charAt(0).toUpperCase() || 'A';
+
+      const avatarEl = document.getElementById('user-avatar');
+      if (avatarEl) avatarEl.textContent = initial;
+
+      const pName = document.getElementById('profile-display-name');
+      if (pName) pName.textContent = name;
+
+      const pEmail = document.getElementById('profile-display-email');
+      if (pEmail) pEmail.textContent = email;
+
+      const pPhone = document.getElementById('profile-display-phone');
+      if (pPhone) pPhone.textContent = phone;
+
+      // Populate Form inputs
+      const fName = document.getElementById('input-fullname');
+      if (fName) fName.value = name;
+
+      const fEmail = document.getElementById('input-email');
+      if (fEmail) fEmail.value = email;
+
+      const fPhone = document.getElementById('input-phone');
+      if (fPhone) fPhone.value = phone;
+
+      const fCompany = document.getElementById('input-company');
+      if (fCompany) fCompany.value = company;
+    }
+
+    function renderSummaryCounts() {
+      if (!window.IDCraftState) return;
+      const orders = window.IDCraftState.getOrders() || [];
+      const customReqs = window.IDCraftState.getCustomRequests() || [];
+      const savedDesigns = window.IDCraftState.getSavedDesigns() || [];
+
+      const activeOrders = orders.filter(o => o.status !== 'DELIVERED').length;
+      const completedOrders = orders.filter(o => o.status === 'DELIVERED').length;
+
+      const sActive = document.getElementById('summary-active-orders');
+      if (sActive) sActive.textContent = String(activeOrders).padStart(2, '0');
+
+      const sCompleted = document.getElementById('summary-completed-orders');
+      if (sCompleted) sCompleted.textContent = String(completedOrders).padStart(2, '0');
+
+      const sCustom = document.getElementById('summary-custom-requests');
+      if (sCustom) sCustom.textContent = String(customReqs.length).padStart(2, '0');
+
+      const navOrd = document.getElementById('nav-orders-count');
+      if (navOrd) navOrd.textContent = orders.length;
+
+      const navCust = document.getElementById('nav-custom-count');
+      if (navCust) navCust.textContent = customReqs.length;
+
+      const navSaved = document.getElementById('nav-saved-count');
+      if (navSaved) navSaved.textContent = savedDesigns.length;
+    }
+
+    function getStatusBadge(status) {
+      const s = (status || '').toUpperCase();
+      let colorClass = 'bg-primary/10 text-primary border-primary/30';
+      if (s === 'DELIVERED' || s === 'COMPLETED' || s === 'APPROVED') {
+        colorClass = 'bg-green-500/10 text-green-400 border-green-500/30';
+      } else if (s === 'DESIGN REVIEW' || s === 'QUOTE PENDING' || s === 'ORDER RECEIVED') {
+        colorClass = 'bg-tertiary/10 text-tertiary border-tertiary/30';
+      }
+      return `<span class="px-2.5 py-0.5 rounded text-[11px] font-label-mono-spec uppercase font-semibold border ${colorClass}">${status}</span>`;
+    }
+
+    function renderRecentOrders() {
+      if (!window.IDCraftState) return;
+      const orders = window.IDCraftState.getOrders() || [];
+      const container = document.getElementById('recent-orders-list');
+      if (!container) return;
+
+      const recent = orders.slice(0, 2);
+      if (recent.length === 0) {
+        container.innerHTML = `<div class="p-8 text-center text-on-surface-variant font-body-sm">No recent orders found.</div>`;
+        return;
+      }
+
+      container.innerHTML = recent.map(order => createOrderCardHtml(order)).join('');
+    }
+
+    function filterOrders(filter) {
+      currentFilter = filter;
+      document.querySelectorAll('.order-filter-btn').forEach(btn => {
+        if (btn.dataset.filter === filter) {
+          btn.classList.add('active', 'bg-primary', 'text-on-primary');
+          btn.classList.remove('text-on-surface-variant');
+        } else {
+          btn.classList.remove('active', 'bg-primary', 'text-on-primary');
+          btn.classList.add('text-on-surface-variant');
+        }
+      });
+      renderAllOrders();
+    }
+
+    function renderAllOrders() {
+      if (!window.IDCraftState) return;
+      const orders = window.IDCraftState.getOrders() || [];
+      const container = document.getElementById('all-orders-list');
+      if (!container) return;
+
+      let filtered = orders;
+      if (currentFilter === 'ACTIVE') {
+        filtered = orders.filter(o => o.status !== 'DELIVERED');
+      } else if (currentFilter === 'COMPLETED') {
+        filtered = orders.filter(o => o.status === 'DELIVERED');
+      }
+
+      if (filtered.length === 0) {
+        container.innerHTML = `<div class="p-8 text-center text-on-surface-variant font-body-sm">No orders matching "${currentFilter}" filter.</div>`;
+        return;
+      }
+
+      container.innerHTML = filtered.map(order => createOrderCardHtml(order)).join('');
+    }
+
+    function createOrderCardHtml(order) {
+      const firstItem = order.items && order.items[0] ? order.items[0] : { name: 'Custom Hardware', quantity: 1, image: '' };
+      const formattedDate = new Date(order.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+      const qtyText = order.items.reduce((sum, item) => sum + (item.quantity || 1), 0);
+
+      return `
+        <div class="p-4 sm:p-5 rounded bg-surface-container/60 hover:bg-surface-container border border-outline-variant/30 transition-all flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div class="flex items-start sm:items-center gap-4">
+            <img src="${firstItem.image}" alt="${firstItem.name}" class="w-14 h-14 sm:w-16 sm:h-16 rounded object-cover bg-surface-container-high border border-outline-variant/30 shrink-0"/>
+            <div class="space-y-1">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="font-label-action text-xs font-bold text-primary uppercase tracking-wider">ORDER #${order.orderId}</span>
+                ${getStatusBadge(order.status)}
+              </div>
+              <h3 class="font-headline-sm text-sm sm:text-base font-semibold text-on-surface">${firstItem.name}</h3>
+              <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-label-mono-spec text-on-surface-variant">
+                <span>Quantity: <strong class="text-on-surface">${qtyText}</strong></span>
+                <span>•</span>
+                <span>${formattedDate}</span>
+                <span>•</span>
+                <span class="text-primary font-semibold font-mono">${parseFloat(order.total).toFixed(3)} KWD</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 self-end md:self-auto shrink-0">
+            <button onclick="openOrderModal('${order.orderId}')" class="px-3.5 py-2 bg-surface-container-high hover:bg-surface-container-highest text-primary border border-outline-variant/40 font-label-action text-xs uppercase tracking-wider rounded font-semibold transition-colors">
+              VIEW ORDER
+            </button>
+            <a href="track-order.html?orderId=${order.orderId}" class="px-3.5 py-2 bg-primary text-on-primary hover:bg-primary-fixed font-label-action text-xs uppercase tracking-wider rounded font-semibold transition-colors flex items-center gap-1">
+              <span>TRACK</span>
+              <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderRecentCustomRequests() {
+      if (!window.IDCraftState) return;
+      const requests = window.IDCraftState.getCustomRequests() || [];
+      const container = document.getElementById('recent-custom-requests-list');
+      if (!container) return;
+
+      const recent = requests.slice(0, 2);
+      if (recent.length === 0) {
+        container.innerHTML = `<div class="p-8 text-center text-on-surface-variant font-body-sm">No custom requests submitted yet.</div>`;
+        return;
+      }
+
+      container.innerHTML = recent.map(req => createCustomRequestCardHtml(req)).join('');
+    }
+
+    function renderAllCustomRequests() {
+      if (!window.IDCraftState) return;
+      const requests = window.IDCraftState.getCustomRequests() || [];
+      const container = document.getElementById('all-custom-requests-list');
+      if (!container) return;
+
+      if (requests.length === 0) {
+        container.innerHTML = `<div class="p-8 text-center text-on-surface-variant font-body-sm">No custom requests found.</div>`;
+        return;
+      }
+
+      container.innerHTML = requests.map(req => createCustomRequestCardHtml(req)).join('');
+    }
+
+    function createCustomRequestCardHtml(req) {
+      const formattedDate = new Date(req.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+      return `
+        <div class="p-4 sm:p-5 rounded bg-surface-container/60 hover:bg-surface-container border border-outline-variant/30 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div class="space-y-1">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="font-label-action text-xs font-bold text-tertiary uppercase tracking-wider">REQUEST #${req.refCode}</span>
+              ${getStatusBadge(req.status)}
+            </div>
+            <h3 class="font-headline-sm text-sm sm:text-base font-semibold text-on-surface">${req.product || 'Custom Hardware Specification'}</h3>
+            <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-label-mono-spec text-on-surface-variant">
+              <span>Quantity: <strong class="text-on-surface">${req.quantity}</strong></span>
+              <span>•</span>
+              <span>Submitted: ${formattedDate}</span>
+              ${req.reference ? `<span>•</span><span class="text-tertiary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">attach_file</span>${req.reference}</span>` : ''}
+            </div>
+          </div>
+          <div class="shrink-0 self-end sm:self-auto">
+            <button onclick="openCustomModal('${req.refCode}')" class="px-3.5 py-2 bg-surface-container-high hover:bg-surface-container-highest text-tertiary border border-outline-variant/40 font-label-action text-xs uppercase tracking-wider rounded font-semibold transition-colors">
+              VIEW REQUEST
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderSavedDesigns() {
+      if (!window.IDCraftState) return;
+      const designs = window.IDCraftState.getSavedDesigns() || [];
+      const container = document.getElementById('saved-designs-grid');
+      if (!container) return;
+
+      if (designs.length === 0) {
+        container.innerHTML = `<div class="col-span-full p-8 text-center text-on-surface-variant font-body-sm">No saved designs or artwork templates yet.</div>`;
+        return;
+      }
+
+      container.innerHTML = designs.map(d => `
+        <div class="p-4 rounded bg-surface-container/60 hover:bg-surface-container border border-outline-variant/30 transition-all flex flex-col justify-between gap-3 group">
+          <div class="space-y-3">
+            <div class="aspect-video w-full rounded overflow-hidden bg-surface-container-high relative border border-outline-variant/20">
+              <img src="${d.image}" alt="${d.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+              <span class="absolute bottom-2 left-2 px-2 py-0.5 rounded text-[10px] font-label-mono-spec uppercase bg-surface-container-lowest/80 backdrop-blur-md text-tertiary">
+                ${d.product}
+              </span>
+            </div>
+            <div>
+              <h4 class="font-headline-sm text-sm font-semibold text-on-surface">${d.name}</h4>
+              <p class="font-body-sm text-[11px] text-on-surface-variant mt-0.5">${d.dateSaved || 'Saved'}</p>
+            </div>
+          </div>
+          <div class="pt-2 border-t border-outline-variant/20 flex items-center justify-between gap-2">
+            <a href="${d.link || 'custom-order.html'}" class="flex-1 py-1.5 bg-primary text-on-primary hover:bg-primary-fixed font-label-action text-[11px] uppercase tracking-wider rounded text-center font-bold transition-colors">
+              USE DESIGN
+            </a>
+            <button onclick="deleteSavedDesign('${d.id}')" title="Delete Design" class="w-7 h-7 flex items-center justify-center rounded text-on-surface-variant hover:text-error hover:bg-error/10 transition-colors">
+              <span class="material-symbols-outlined text-[16px]">delete</span>
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function deleteSavedDesign(id) {
+      if (confirm('Are you sure you want to delete this saved design?')) {
+        if (window.IDCraftState) {
+          window.IDCraftState.deleteSavedDesign(id);
+          renderSavedDesigns();
+          renderSummaryCounts();
+        }
+      }
+    }
+
+    function renderAddresses() {
+      if (!window.IDCraftState) return;
+      const addresses = window.IDCraftState.getAddresses() || [];
+      const container = document.getElementById('addresses-grid');
+      if (!container) return;
+
+      if (addresses.length === 0) {
+        container.innerHTML = `<div class="col-span-full p-8 text-center text-on-surface-variant font-body-sm">No delivery addresses saved. Click "Add Address" to add one.</div>`;
+        return;
+      }
+
+      container.innerHTML = addresses.map(addr => `
+        <div class="p-5 rounded bg-surface-container/60 hover:bg-surface-container border ${addr.isDefault ? 'border-primary/50' : 'border-outline-variant/30'} transition-all flex flex-col justify-between gap-4">
+          <div class="space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-label-action text-xs font-bold text-on-surface uppercase tracking-wide">${addr.title || 'Address'}</span>
+              ${addr.isDefault ? '<span class="px-2 py-0.5 rounded text-[10px] font-label-mono-spec uppercase font-semibold bg-primary/10 text-primary border border-primary/30">DEFAULT</span>' : ''}
+            </div>
+            <div class="text-xs text-on-surface-variant space-y-1 font-body-md">
+              <p class="font-semibold text-on-surface">${addr.fullName}</p>
+              <p>${addr.street}</p>
+              <p>${addr.area}, ${addr.city}, ${addr.country}</p>
+              <p class="font-mono text-[11px] text-primary pt-1">${addr.phone}</p>
+            </div>
+          </div>
+          <div class="pt-3 border-t border-outline-variant/20 flex items-center justify-between gap-2 text-xs font-label-action">
+            <div class="flex items-center gap-2">
+              <button onclick="editAddress('${addr.id}')" class="text-primary hover:underline">Edit</button>
+              <span class="opacity-30">•</span>
+              <button onclick="deleteAddress('${addr.id}')" class="text-error hover:underline">Delete</button>
+            </div>
+            ${!addr.isDefault ? `<button onclick="setDefaultAddress('${addr.id}')" class="text-tertiary hover:underline">Set Default</button>` : ''}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function openAddressModal(addr = null) {
+      const modal = document.getElementById('modal-address');
+      const titleEl = document.getElementById('modal-address-title');
+      const idEl = document.getElementById('addr-id');
+      const titleInput = document.getElementById('addr-title');
+      const nameInput = document.getElementById('addr-name');
+      const phoneInput = document.getElementById('addr-phone');
+      const cityInput = document.getElementById('addr-city');
+      const areaInput = document.getElementById('addr-area');
+      const streetInput = document.getElementById('addr-street');
+      const defaultCheck = document.getElementById('addr-default');
+
+      if (addr) {
+        titleEl.textContent = 'EDIT ADDRESS';
+        idEl.value = addr.id;
+        titleInput.value = addr.title || '';
+        nameInput.value = addr.fullName || '';
+        phoneInput.value = addr.phone || '';
+        cityInput.value = addr.city || '';
+        areaInput.value = addr.area || '';
+        streetInput.value = addr.street || '';
+        defaultCheck.checked = !!addr.isDefault;
+      } else {
+        titleEl.textContent = 'ADD NEW ADDRESS';
+        idEl.value = '';
+        const user = window.IDCraftState ? window.IDCraftState.getCurrentUser() : null;
+        titleInput.value = 'Primary Residence';
+        nameInput.value = user ? user.fullName : '';
+        phoneInput.value = user ? user.phone : '';
+        cityInput.value = 'Kuwait City';
+        areaInput.value = '';
+        streetInput.value = '';
+        defaultCheck.checked = false;
+      }
+
+      modal.classList.remove('hidden');
+    }
+
+    function closeAddressModal() {
+      document.getElementById('modal-address').classList.add('hidden');
+    }
+
+    function editAddress(id) {
+      const addresses = window.IDCraftState.getAddresses();
+      const addr = addresses.find(a => a.id === id);
+      if (addr) openAddressModal(addr);
+    }
+
+    function deleteAddress(id) {
+      if (confirm('Are you sure you want to delete this delivery address?')) {
+        window.IDCraftState.deleteAddress(id);
+        renderAddresses();
+      }
+    }
+
+    function setDefaultAddress(id) {
+      window.IDCraftState.setDefaultAddress(id);
+      renderAddresses();
+    }
+
+    function handleAddressSubmit(e) {
+      e.preventDefault();
+      const id = document.getElementById('addr-id').value;
+      const data = {
+        title: document.getElementById('addr-title').value,
+        fullName: document.getElementById('addr-name').value,
+        phone: document.getElementById('addr-phone').value,
+        city: document.getElementById('addr-city').value,
+        area: document.getElementById('addr-area').value,
+        street: document.getElementById('addr-street').value,
+        country: 'Kuwait',
+        isDefault: document.getElementById('addr-default').checked
+      };
+
+      if (id) {
+        window.IDCraftState.updateAddress(id, data);
+      } else {
+        window.IDCraftState.addAddress(data);
+      }
+
+      closeAddressModal();
+      renderAddresses();
+    }
+
+    function handleProfileSubmit(e) {
+      e.preventDefault();
+      const updated = {
+        fullName: document.getElementById('input-fullname').value,
+        email: document.getElementById('input-email').value,
+        phone: document.getElementById('input-phone').value,
+        company: document.getElementById('input-company').value
+      };
+
+      if (window.IDCraftState) {
+        window.IDCraftState.updateUserProfile(updated);
+        renderUserProfile(updated);
+        
+        const feedback = document.getElementById('profile-feedback');
+        if (feedback) {
+          feedback.classList.remove('hidden');
+          setTimeout(() => feedback.classList.add('hidden'), 3000);
+        }
+      }
+    }
+
+    function loadSettings() {
+      if (!window.IDCraftState) return;
+      const settings = window.IDCraftState.getSettings();
+      const sEmail = document.getElementById('setting-email');
+      const sSms = document.getElementById('setting-sms');
+      const sWa = document.getElementById('setting-whatsapp');
+
+      if (sEmail) sEmail.checked = !!settings.emailNotifications;
+      if (sSms) sSms.checked = !!settings.orderUpdates;
+      if (sWa) sWa.checked = !!settings.whatsappUpdates;
+    }
+
+    function handleSettingChange(key, value) {
+      if (window.IDCraftState) {
+        window.IDCraftState.updateSettings({ [key]: value });
+      }
+    }
+
+    function setAccountLang(lang) {
+      if (window.IDCraftState) {
+        window.IDCraftState.setLanguage(lang);
+        const btnEn = document.getElementById('lang-btn-en');
+        const btnAr = document.getElementById('lang-btn-ar');
+        if (lang === 'EN') {
+          btnEn.className = 'px-4 py-2 rounded font-label-action text-xs uppercase tracking-wider font-semibold bg-primary text-on-primary transition-all';
+          btnAr.className = 'px-4 py-2 rounded font-label-action text-xs uppercase tracking-wider font-semibold bg-surface-container text-on-surface-variant hover:text-on-surface transition-all';
+        } else {
+          btnAr.className = 'px-4 py-2 rounded font-label-action text-xs uppercase tracking-wider font-semibold bg-primary text-on-primary transition-all';
+          btnEn.className = 'px-4 py-2 rounded font-label-action text-xs uppercase tracking-wider font-semibold bg-surface-container text-on-surface-variant hover:text-on-surface transition-all';
+        }
+      }
+    }
+
+    function handlePasswordChange(e) {
+      e.preventDefault();
+      alert('Password updated successfully.');
+      e.target.reset();
+    }
+
+    // Modal Details functions
+    function openOrderModal(orderId) {
+      const order = window.IDCraftState.getOrderById(orderId);
+      if (!order) return;
+
+      document.getElementById('modal-order-id').textContent = 'ORDER #' + order.orderId;
+      document.getElementById('modal-order-status').textContent = order.status;
+      document.getElementById('modal-order-date').textContent = 'Placed on ' + new Date(order.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+      document.getElementById('modal-order-subtotal').textContent = parseFloat(order.subtotal).toFixed(3) + ' KWD';
+      document.getElementById('modal-order-total').textContent = parseFloat(order.total).toFixed(3) + ' KWD';
+      document.getElementById('modal-track-link').href = 'track-order.html?orderId=' + order.orderId;
+
+      const itemsContainer = document.getElementById('modal-order-items');
+      itemsContainer.innerHTML = order.items.map(item => `
+        <div class="flex items-center justify-between p-3 rounded bg-surface-container border border-outline-variant/30">
+          <div class="flex items-center gap-3">
+            <img src="${item.image}" alt="${item.name}" class="w-12 h-12 rounded object-cover border border-outline-variant/30"/>
+            <div class="space-y-0.5">
+              <span class="font-semibold text-xs text-on-surface block">${item.name}</span>
+              <span class="text-[11px] text-on-surface-variant block">Qty: ${item.quantity}</span>
+            </div>
+          </div>
+          <span class="font-mono text-xs font-semibold text-primary">${parseFloat(item.price * item.quantity).toFixed(3)} KWD</span>
+        </div>
+      `).join('');
+
+      document.getElementById('modal-order-details').classList.remove('hidden');
+    }
+
+    function closeOrderModal() {
+      document.getElementById('modal-order-details').classList.add('hidden');
+    }
+
+    function openCustomModal(refCode) {
+      const req = window.IDCraftState.getCustomRequestById(refCode);
+      if (!req) return;
+
+      document.getElementById('modal-req-code').textContent = 'REQUEST #' + req.refCode;
+      document.getElementById('modal-req-date').textContent = 'Submitted on ' + new Date(req.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+      document.getElementById('modal-req-product').textContent = req.product;
+      document.getElementById('modal-req-qty').textContent = req.quantity + ' units';
+      document.getElementById('modal-req-status').textContent = req.status;
+      document.getElementById('modal-req-details').textContent = req.details || 'Standard custom specifications.';
+
+      document.getElementById('modal-custom-details').classList.remove('hidden');
+    }
+
+    function closeCustomModal() {
+      document.getElementById('modal-custom-details').classList.add('hidden');
+    }
+
+    function openSignOutModal() {
+      document.getElementById('modal-signout').classList.remove('hidden');
+    }
+
+    function closeSignOutModal() {
+      document.getElementById('modal-signout').classList.add('hidden');
+    }
+
+    function confirmSignOut() {
+      if (window.IDCraftState) {
+        window.IDCraftState.logout();
+      }
+      closeSignOutModal();
+      window.location.href = 'auth.html';
+    }
+
+    // Initialize on DOM ready
+    document.addEventListener('DOMContentLoaded', initAccountDashboard);
+  </script>
+</body>
+</html>

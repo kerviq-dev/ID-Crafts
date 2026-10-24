@@ -1,0 +1,765 @@
+/* ==========================================================================
+   ID CRAFTS LUXURY ATELIER — GLOBAL CUSTOM STYLES & GLASSMORPHISM SYSTEM
+   ========================================================================== */
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0e10;
+}
+::-webkit-scrollbar-thumb {
+  background: #292a2c;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4af37;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Universal Fixed Layout Containers */
+.atelier-container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .atelier-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .atelier-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.atelier-container-narrow {
+  width: 100%;
+  max-width: 1040px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .atelier-container-narrow {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* Protected Brand Logo */
+.atelier-logo-brand {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+  flex-shrink: 0 !important;
+  white-space: nowrap !important;
+  min-width: max-content !important;
+  user-select: none !important;
+  text-decoration: none !important;
+}
+
+.atelier-logo-text {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  border-left: 1px solid rgba(77, 70, 53, 0.4) !important;
+  padding-left: 0.75rem !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  min-width: max-content !important;
+}
+
+.atelier-logo-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #e3e2e5;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+.atelier-logo-sub {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.625rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: #f1c97d;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+/* Glassmorphism System */
+.atelier-glass-header {
+  background: rgba(13, 14, 16, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(77, 70, 53, 0.35);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+.atelier-glass-subbar {
+  background: rgba(13, 14, 16, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(77, 70, 53, 0.25);
+}
+
+.atelier-glass-panel {
+  background: rgba(27, 28, 30, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(77, 70, 53, 0.4);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+}
+
+.atelier-glass-card {
+  background: rgba(31, 32, 34, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(77, 70, 53, 0.35);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.atelier-glass-card:hover {
+  border-color: rgba(242, 202, 80, 0.5);
+  background: rgba(36, 37, 40, 0.85);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 20px rgba(242, 202, 80, 0.1);
+}
+
+/* Navigation Link States */
+.atelier-nav-link {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.725rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #d0c5af;
+  padding: 0.38rem 0.65rem;
+  border-radius: 0.375rem;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.atelier-nav-link:hover {
+  color: #f2ca50;
+  background: rgba(242, 202, 80, 0.08);
+}
+
+.atelier-nav-link.active {
+  color: #121315 !important;
+  background: #f2ca50 !important;
+  font-weight: 700;
+  box-shadow: 0 0 16px rgba(242, 202, 80, 0.35);
+}
+
+/* Filter Pill System */
+.atelier-filter-pill {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: rgba(31, 32, 34, 0.8);
+  color: #d0c5af;
+  border: 1px solid rgba(77, 70, 53, 0.35);
+  white-space: nowrap;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.atelier-filter-pill:hover {
+  color: #e3e2e5;
+  background: rgba(41, 42, 44, 0.95);
+  border-color: rgba(242, 202, 80, 0.4);
+}
+
+.atelier-filter-pill.active {
+  background: #f2ca50;
+  color: #121315;
+  font-weight: 700;
+  border-color: #f2ca50;
+  box-shadow: 0 0 16px rgba(242, 202, 80, 0.3);
+}
+
+/* Glow Effects */
+.gold-glow {
+  box-shadow: 0 0 35px rgba(242, 202, 80, 0.18);
+}
+
+.gold-glow-hover:hover {
+  box-shadow: 0 0 30px rgba(242, 202, 80, 0.35);
+}
+
+/* Slide-Over Drawers */
+.drawer-backdrop {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.drawer-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.drawer-panel {
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.drawer-backdrop.active .drawer-panel {
+  transform: translateX(0);
+}
+
+/* Modals */
+.modal-backdrop {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease-out;
+}
+
+.modal-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  transform: scale(0.95) translateY(10px);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-backdrop.active .modal-content {
+  transform: scale(1) translateY(0);
+}
+
+/* Toast Notifications */
+#toast-container {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  pointer-events: none;
+}
+
+.toast-item {
+  pointer-events: auto;
+  min-width: 320px;
+  max-width: 420px;
+  background: rgba(27, 28, 30, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-left: 4px solid #f2ca50;
+  border-top: 1px solid rgba(77, 70, 53, 0.5);
+  border-right: 1px solid rgba(77, 70, 53, 0.5);
+  border-bottom: 1px solid rgba(77, 70, 53, 0.5);
+  color: #e3e2e5;
+  padding: 1rem 1.25rem;
+  border-radius: 6px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.7), 0 0 20px rgba(242, 202, 80, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  animation: toastSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transition: all 0.3s ease;
+}
+
+.toast-item.hide {
+  opacity: 0;
+  transform: translateY(15px);
+}
+
+@keyframes toastSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Shine Hover */
+.shine-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine-hover::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 70%
+  );
+  transform: rotate(30deg) translateY(-100%);
+  transition: transform 0.75s ease;
+}
+
+.shine-hover:hover::after {
+  transform: rotate(30deg) translateY(100%);
+}
+
+/* ==========================================================================
+   REFERENCE WEBSITE AESTHETICS & FLOATING PILL NAVIGATION
+   ========================================================================== */
+
+/* Floating Glass Pill Navbar */
+.atelier-floating-pill-nav {
+  background: rgba(18, 19, 22, 0.78);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  border-radius: 9999px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.atelier-floating-pill-nav:hover {
+  border-color: rgba(212, 175, 55, 0.3);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 24px rgba(212, 175, 55, 0.15);
+}
+
+/* Reference Showcase Dark Glass Cards */
+.ref-showcase-card {
+  background: rgba(22, 23, 27, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.25rem;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.ref-showcase-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(212, 175, 55, 0.45);
+  background: rgba(28, 29, 34, 0.92);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.7), 0 0 30px rgba(212, 175, 55, 0.12);
+}
+
+/* Circular Quick Action Button */
+.ref-action-circle-btn {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 9999px;
+  background: #d4af37;
+  color: #0d0e10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+  box-shadow: 0 0 16px rgba(212, 175, 55, 0.35);
+}
+
+.ref-action-circle-btn:hover {
+  background: #e9c176;
+  transform: scale(1.1);
+  box-shadow: 0 0 24px rgba(212, 175, 55, 0.5);
+}
+
+/* Rating Badge Pill */
+.ref-rating-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  background: rgba(13, 14, 16, 0.75);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: 'Plus Jakarta Sans', monospace;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: #d4af37;
+}
+
+/* Symmetrical Feature Block */
+.ref-feature-block {
+  padding: 1.25rem;
+  border-radius: 1rem;
+  background: rgba(22, 23, 27, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.3s ease;
+}
+
+.ref-feature-block:hover {
+  background: rgba(28, 29, 34, 0.85);
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+/* Edge Scrim for High-Clarity Video Heroes */
+.hero-vignette-scrim {
+  background: radial-gradient(circle at 75% 40%, transparent 20%, rgba(13, 14, 16, 0.4) 60%, #0d0e10 100%),
+              linear-gradient(to right, #0d0e10 0%, rgba(13, 14, 16, 0.75) 40%, transparent 80%),
+              linear-gradient(to top, #0d0e10 0%, transparent 35%);
+}
+
+/* ==========================================================================
+   REAL-TIME ATELIER RADAR MAP & LEAFLET DARK TELEMETRY THEME
+   ========================================================================== */
+.leaflet-container {
+  background: #08090b !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.leaflet-bar {
+  border: 1px solid rgba(242, 202, 80, 0.35) !important;
+  border-radius: 0.5rem !important;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7) !important;
+}
+
+.leaflet-bar a {
+  background-color: rgba(18, 19, 21, 0.92) !important;
+  color: #f2ca50 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  transition: all 0.2s ease;
+}
+
+.leaflet-bar a:hover {
+  background-color: #242528 !important;
+  color: #ffe088 !important;
+}
+
+.leaflet-popup-content-wrapper {
+  background: rgba(18, 19, 22, 0.95) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(242, 202, 80, 0.45) !important;
+  border-radius: 0.875rem !important;
+  color: #e3e2e5 !important;
+  padding: 0 !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8), 0 0 24px rgba(242, 202, 80, 0.2) !important;
+}
+
+.leaflet-popup-content {
+  margin: 0.875rem 1rem !important;
+  line-height: 1.4 !important;
+}
+
+.leaflet-popup-tip {
+  background: rgba(18, 19, 22, 0.95) !important;
+  border: 1px solid rgba(242, 202, 80, 0.45) !important;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+  color: #d0c5af !important;
+  padding: 6px !important;
+}
+
+.leaflet-container a.leaflet-popup-close-button:hover {
+  color: #f2ca50 !important;
+}
+
+/* Custom Marker: Real-Time Radar Pulse */
+.atelier-map-radar-pulse {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.atelier-map-radar-pulse::before {
+  content: '';
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(242, 202, 80, 0.25);
+  animation: radar-ping 2.2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.atelier-map-radar-pulse::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #f2ca50;
+  border: 3px solid #0d0e10;
+  box-shadow: 0 0 16px rgba(242, 202, 80, 0.9);
+}
+
+/* Moving Courier Vehicle Marker */
+.courier-pulse-marker {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  background: #0d0e10;
+  border: 2px solid #f2ca50;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f2ca50;
+  box-shadow: 0 0 20px rgba(242, 202, 80, 0.6);
+  transition: transform 0.5s ease-out;
+}
+
+.courier-pulse-marker::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: rgba(242, 202, 80, 0.3);
+  animation: courier-radar 1.8s infinite;
+}
+
+@keyframes radar-ping {
+  0% { transform: scale(0.4); opacity: 1; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+@keyframes courier-radar {
+  0% { transform: scale(0.8); opacity: 0.9; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+/* ==========================================================================
+   MOBILE NAVIGATION DRAWER STYLES
+   ========================================================================== */
+
+/* Ensure mobile menu button only shows on small screens */
+#mobile-menu-btn {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  #mobile-menu-btn {
+    display: flex !important;
+  }
+}
+
+/* Mobile nav drawer slides from right */
+#mobile-nav-drawer .drawer-panel {
+  max-width: 320px;
+  width: 85vw;
+}
+
+/* Mobile nav link styles */
+.mobile-nav-link {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   PERFORMANCE & CORE WEB VITALS OPTIMIZATIONS
+   ========================================================================== */
+
+/* Smooth page-level scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus visible outlines for keyboard nav */
+:focus-visible {
+  outline: 2px solid #f2ca50;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Skip to main content — accessibility */
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.5rem 1rem;
+  background: #f2ca50;
+  color: #121315;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: 0 0 0.5rem 0.5rem;
+  transition: top 0.2s ease;
+  text-decoration: none;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* Lazy-loaded image fade in */
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+img[loading="lazy"].loaded,
+img.loaded {
+  opacity: 1;
+}
+
+/* Hardware-accelerated transitions */
+.atelier-glass-card,
+.ref-showcase-card,
+.atelier-filter-pill,
+.drawer-panel,
+.modal-content {
+  will-change: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+/* Prevent flash of unstyled content (FOUC) */
+html.dark {
+  background-color: #121315;
+  color: #e3e2e5;
+}
+
+/* ==========================================================================
+   UI COMPONENT IMPROVEMENTS
+   ========================================================================== */
+
+/* Button press feedback */
+button:active,
+a[role="button"]:active {
+  transform: scale(0.97);
+  transition: transform 0.1s ease;
+}
+
+/* Improved input states */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #f2ca50 !important;
+  box-shadow: 0 0 0 2px rgba(242, 202, 80, 0.2);
+}
+
+/* Better link transitions */
+a {
+  text-underline-offset: 3px;
+}
+
+/* Prevent overflow issues on mobile */
+@media (max-width: 639px) {
+  .toast-item {
+    min-width: 280px;
+    max-width: calc(100vw - 2rem);
+  }
+
+  #toast-container {
+    right: 1rem;
+    bottom: 1rem;
+  }
+}
+
+/* Aspect ratio polyfill for older browsers */
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
+/* Video hero optimization */
+video {
+  -webkit-playsinline: true;
+}
+
+/* Sticky header border visible on scroll */
+header.scrolled {
+  border-bottom-color: rgba(77, 70, 53, 0.5) !important;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* CTA Pulse Animation */
+@keyframes ctaPulse {
+  0%, 100% { box-shadow: 0 0 24px rgba(212, 175, 55, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(212, 175, 55, 0.55); }
+}
+
+.cta-pulse {
+  animation: ctaPulse 2.5s ease-in-out infinite;
+}
+
+/* Page transition fade */
+.page-fade-in {
+  animation: pageFadeIn 0.4s ease forwards;
+}
+
+@keyframes pageFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================================
+   ENHANCED SCROLLBAR (DESKTOP)
+   ========================================================================== */
+@media (min-width: 1024px) {
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    display: block;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0d0e10;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #292a2c;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #d4af37;
+  }
+}
+
+@media (max-width: 1023px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+

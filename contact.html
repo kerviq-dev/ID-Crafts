@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Contact &amp; Shuwaikh Metrology Atelier — ID CRAFT</title>
+  <meta name="description" content="Direct commission console and architectural radar location for ID CRAFT Atelier in Shuwaikh Industrial 1, Kuwait.">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;family=Syne:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  <!-- Leaflet Interactive Map Engine -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <link rel="stylesheet" href="css/custom.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-tertiary-fixed-variant": "#5d4201",
+            "surface-bright": "#38393b",
+            "on-secondary-fixed": "#1d1c16",
+            "on-tertiary": "#412d00",
+            "surface-container-lowest": "#0d0e10",
+            "inverse-on-surface": "#303033",
+            "outline": "#99907c",
+            "surface-container-high": "#292a2c",
+            "on-primary-container": "#554300",
+            "on-error-container": "#ffdad6",
+            "primary-fixed-dim": "#e9c349",
+            "on-surface-variant": "#d0c5af",
+            "secondary-fixed-dim": "#cac6bd",
+            "tertiary": "#f1c97d",
+            "primary": "#f2ca50",
+            "surface-container-low": "#1b1c1e",
+            "on-secondary-fixed-variant": "#494740",
+            "surface-container": "#1f2022",
+            "on-secondary": "#32302a",
+            "on-primary": "#3c2f00",
+            "on-primary-fixed-variant": "#574500",
+            "surface-tint": "#e9c349",
+            "error-container": "#93000a",
+            "outline-variant": "#4d4635",
+            "on-error": "#690005",
+            "surface-container-highest": "#343537",
+            "on-secondary-container": "#b9b5ac",
+            "secondary": "#cac6bd",
+            "surface-variant": "#343537",
+            "inverse-primary": "#735c00",
+            "on-surface": "#e3e2e5",
+            "background": "#121315",
+            "on-background": "#e3e2e5",
+            "surface": "#121315",
+            "on-tertiary-fixed": "#261900",
+            "surface-dim": "#121315",
+            "secondary-container": "#494740",
+            "inverse-surface": "#e3e2e5",
+            "on-tertiary-container": "#5b4000",
+            "primary-fixed": "#ffe088",
+            "on-primary-fixed": "#241a00",
+            "secondary-fixed": "#e7e2d9",
+            "tertiary-fixed": "#ffdea5",
+            "tertiary-container": "#d3ad65",
+            "tertiary-fixed-dim": "#e9c176",
+            "primary-container": "#d4af37",
+            "error": "#ffb4ab"
+          },
+          borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+          spacing: {
+            "space-xl": "4rem",
+            "margin": "1.25rem",
+            "space-xs": "0.375rem",
+            "space-sm": "0.75rem",
+            "space-lg": "2.25rem",
+            "margin-tablet": "2.5rem",
+            "gutter-desktop": "3rem",
+            "margin-desktop": "5rem",
+            "gutter": "1.5rem",
+            "gutter-tablet": "2rem",
+            "space-md": "1.25rem"
+          },
+          fontFamily: {
+            "headline-md": ["Syne", "sans-serif"],
+            "label-mono-spec": ["Plus Jakarta Sans", "monospace"],
+            "label-action": ["Syne", "sans-serif"],
+            "headline-sm": ["Syne", "sans-serif"],
+            "body-md": ["Plus Jakarta Sans", "sans-serif"],
+            "display-hero-mobile": ["Syne", "sans-serif"],
+            "body-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "label-eyebrow": ["Syne", "sans-serif"],
+            "headline-xl": ["Syne", "sans-serif"],
+            "display-hero": ["Syne", "sans-serif"],
+            "headline-lg": ["Syne", "sans-serif"],
+            "body-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "body-xl": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-xl-mobile": ["Syne", "sans-serif"]
+          },
+          fontSize: {
+            "headline-md": ["1.5rem", { "lineHeight": "1.3", "letterSpacing": "0em", "fontWeight": "500" }],
+            "label-mono-spec": ["0.6875rem", { "lineHeight": "1.3", "letterSpacing": "0.08em", "fontWeight": "500" }],
+            "label-action": ["0.8125rem", { "lineHeight": "1.2", "letterSpacing": "0.14em", "fontWeight": "600" }],
+            "headline-sm": ["1.125rem", { "lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "body-md": ["0.875rem", { "lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "display-hero-mobile": ["2.5rem", { "lineHeight": "1.12", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-lg": ["1rem", { "lineHeight": "1.65", "letterSpacing": "0em", "fontWeight": "400" }],
+            "label-eyebrow": ["0.6875rem", { "lineHeight": "1.2", "letterSpacing": "0.22em", "fontWeight": "700" }],
+            "headline-xl": ["3rem", { "lineHeight": "1.15", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "display-hero": ["4.5rem", { "lineHeight": "1.08", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "headline-lg": ["2.25rem", { "lineHeight": "1.2", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "body-sm": ["0.75rem", { "lineHeight": "1.5", "letterSpacing": "0.02em", "fontWeight": "400" }],
+            "body-xl": ["1.25rem", { "lineHeight": "1.6", "letterSpacing": "-0.01em", "fontWeight": "300" }],
+            "headline-xl-mobile": ["2rem", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container">
+
+  <!-- ID CRAFT BESPOKE ATELIER FIXED HEADER (FULL WIDTH LUXURY) -->
+  <header class="fixed top-0 inset-x-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_1px_12px_rgba(0,0,0,0.4)]">
+    <div class="h-20 max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 flex items-center justify-between gap-4">
+      <a href="index.html" class="atelier-logo-brand shrink-0 flex items-center gap-3 group select-none">
+        <img alt="ID CRAFT Luxury Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1WQuwLIdSGZ0krsGOhlWCpQj3_eEfPT6j2SmeVRt7W5OpQk0CStqANVQ_rfZsNUScsNGklGnqUi-N_-tZjfrbsYXs5Ydc6VOaTbCyIP47T6myPegKapAUxoPavmO8WmwDdp7hM6ez4oDJxm1-o12b-h0tdYOm0qemnVx-geYmPWN62wzpHXP0-9ZQMGb9_BCdnZ5KsZq96_-UAdIDarDaP7UR-_kakLArn9Cxwi1B8MvUXWJWKaWFLXZkA"/>
+        <div class="atelier-logo-text flex flex-col justify-center border-l border-outline-variant/40 pl-3 whitespace-nowrap shrink-0">
+          <span class="atelier-logo-title font-label-action text-xs lg:text-sm font-bold uppercase tracking-widest text-on-surface group-hover:text-primary transition-colors whitespace-nowrap">ID&nbsp;CRAFT</span>
+          <span class="atelier-logo-sub font-label-mono-spec text-[10px] tracking-widest uppercase text-tertiary whitespace-nowrap">Kuwait&nbsp;Atelier</span>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-1 xl:gap-2 whitespace-nowrap">
+        <a class="atelier-nav-link" data-path="home" href="index.html">Home</a>
+        <a class="atelier-nav-link" data-path="shop" href="shop.html">Shop</a>
+        <a class="atelier-nav-link" data-path="custom-order" href="custom-order.html">Custom Order</a>
+        <a class="atelier-nav-link" data-path="corporate" href="corporate.html">Corporate</a>
+        <a class="atelier-nav-link" data-path="our-work" href="our-work.html">Our Work</a>
+        <a class="atelier-nav-link" data-path="about" href="about.html">About</a>
+        <a class="atelier-nav-link active" data-path="contact" href="contact.html">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-2 sm:gap-3">
+        <button onclick="if(window.IDCraftApp){window.IDCraftApp.openSearch();}else if(window.IDApp){window.IDApp.openSearch();}" aria-label="Search Archive" class="w-9 h-9 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors">
+          <span class="material-symbols-outlined text-[20px]">search</span>
+        </button>
+        <button onclick="if(window.IDCraftApp){window.IDCraftApp.openWishlist();}else if(window.IDApp){window.IDApp.openWishlist();}" aria-label="Wishlist" class="relative w-9 h-9 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors">
+          <span class="material-symbols-outlined text-[20px]">favorite</span>
+          <span class="header-wishlist-badge absolute -top-0.5 -right-0.5 w-4 h-4 bg-tertiary text-on-primary font-label-mono-spec text-[10px] hidden items-center justify-center rounded-full font-bold">0</span>
+        </button>
+        <a href="cart.html" onclick="if(window.IDCraftApp){window.IDCraftApp.openCart(); return false;}else if(window.IDApp){window.IDApp.openCart(); return false;}" aria-label="Bespoke Cart" class="relative w-9 h-9 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors">
+          <span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+          <span class="header-cart-badge cart-badge absolute -top-0.5 -right-0.5 w-4 h-4 bg-primary text-on-primary font-label-mono-spec text-[10px] flex items-center justify-center rounded-full font-bold">0</span>
+        </a>
+        <div class="lang-toggle hidden md:flex items-center text-on-surface-variant font-label-action text-xs tracking-wider px-2.5 py-1 rounded bg-surface-container/60 border border-outline-variant/30 cursor-pointer hover:border-primary/40 transition-colors">
+          <span onclick="window.IDCraftState && window.IDCraftState.setLanguage('en')" class="hover:text-primary transition-colors">EN</span>
+          <span class="px-1.5 opacity-30">|</span>
+          <span onclick="window.IDCraftState && window.IDCraftState.setLanguage('ar')" class="hover:text-primary transition-colors">العربية</span>
+        </div>
+        <a class="hidden sm:inline-flex items-center justify-center px-4 py-2 bg-primary text-on-primary hover:bg-primary-fixed font-label-action text-xs uppercase tracking-[0.14em] rounded font-bold transition-all duration-300 shadow-md" href="custom-order.html">
+          Order Now
+        </a>
+        <a href="account.html" data-action="account" class="w-8 h-8 rounded-full bg-surface-container-high border border-outline-variant/40 flex items-center justify-center ml-1 text-on-surface hover:text-primary hover:border-primary/50 transition-colors shadow-sm">
+          <span class="material-symbols-outlined text-[18px]">person</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CANVAS -->
+  <main class="relative w-full pt-20 bg-surface min-h-screen overflow-hidden">
+    <!-- Breadcrumb & Telemetry Ribbon -->
+    <div class="w-full bg-surface-container-lowest/90 border-b border-outline-variant/30 backdrop-blur-md relative z-10">
+      <div class="max-w-[1536px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop py-3 flex flex-col md:flex-row md:items-center justify-between gap-3">
+        <div class="flex items-center gap-2 font-label-mono-spec text-xs tracking-widest text-on-surface-variant uppercase flex-wrap">
+          <a class="hover:text-primary transition-colors" href="index.html">HOME</a>
+          <span class="opacity-30">/</span>
+          <span class="text-primary font-semibold">CONTACT &amp; INQUIRIES</span>
+        </div>
+        <div class="flex items-center gap-space-sm font-label-mono-spec text-[11px] tracking-[0.16em] uppercase text-secondary flex-wrap">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-surface-container rounded-full border border-outline-variant/40 text-tertiary">
+            <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+            <span>SHUWAIKH ATELIER // STATE OF KUWAIT</span>
+          </span>
+          <span class="hidden sm:inline opacity-30">•</span>
+          <span class="hidden sm:inline">+965 ATELIER PROTOCOL</span>
+          <span class="hidden lg:inline opacity-30">•</span>
+          <span class="hidden lg:inline text-outline">29.3456° N</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Deep Atmospheric Background Image with Vignette & Gradients -->
+    <div class="fixed inset-0 z-0 pointer-events-none">
+      <img alt="Dark luxury titanium background" class="w-full h-full object-cover object-center opacity-45 mix-blend-luminosity scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2Km_tbUQFX_J3_ZsJFhObmR7saJHRxK--bxxN-IT3ZUGxI0Zs86Au8vjtZ7l7ngZbD3hZzYZ1BJ5GsZPJbO--f5HTbLbxrSBg3XvGPbe1WYmWidK2PPgcWEdl_l4Et2JSU9OVl5it8friqpPECQ55m7xA0xZ5CPiCSLpodXDoC40TvFNgsrSjm3B-CV-eLP73-fxdZCMqavYFSBSP31liPQL-rzaIe3gJe-MBLj2MfRV9VkvlLkQB"/>
+      <div class="absolute inset-0 bg-radial from-transparent via-surface/65 to-surface-container-lowest/95"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-surface/85 via-surface/40 to-surface-container-lowest/95"></div>
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-primary/10 blur-[150px] rounded-full"></div>
+    </div>
+
+    <div class="relative z-10 w-full max-w-[1536px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop pt-8 md:pt-14 pb-16 md:pb-24 flex flex-col items-center">
+      <!-- ATMOSPHERIC HERO HEADER -->
+      <div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-7 md:mb-9">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 bg-surface-container-lowest/80 border border-primary/30 rounded-full mb-3 shadow-[0_0_15px_rgba(212,175,55,0.15)] backdrop-blur-md">
+          <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+          <span class="font-label-eyebrow text-label-eyebrow uppercase tracking-[0.24em] text-primary">Bespoke Inquiries</span>
+        </div>
+        <h1 class="font-display-hero text-4xl sm:text-5xl md:text-display-hero uppercase tracking-tight text-on-surface leading-none">
+          LET'S <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-tertiary to-primary-fixed">CREATE</span>
+        </h1>
+        <p class="font-headline-md text-headline-sm md:text-headline-md text-secondary font-light mt-3">
+          Have a design in mind? Let's talk.
+        </p>
+        <!-- MINIMALIST ICON-ONLY CONTACT DOCK -->
+        <div class="flex items-center justify-center gap-3 md:gap-4 mt-5">
+          <!-- Phone -->
+          <a aria-label="Telephone" class="w-11 h-11 rounded-full bg-surface-container-lowest/90 backdrop-blur-md border border-primary/35 hover:border-primary text-secondary hover:text-primary flex items-center justify-center transition-all duration-300 shadow-lg hover:scale-105 hover:shadow-[0_0_18px_rgba(242,202,80,0.35)]" href="tel:+96522004567">
+            <span class="material-symbols-outlined text-[20px]">call</span>
+          </a>
+          <!-- Email -->
+          <a aria-label="Email Protocol" class="w-11 h-11 rounded-full bg-surface-container-lowest/90 backdrop-blur-md border border-primary/35 hover:border-primary text-secondary hover:text-primary flex items-center justify-center transition-all duration-300 shadow-lg hover:scale-105 hover:shadow-[0_0_18px_rgba(242,202,80,0.35)]" href="mailto:atelier@idcraft.com.kw">
+            <span class="material-symbols-outlined text-[20px]">mail</span>
+          </a>
+          <!-- Instagram -->
+          <a aria-label="Instagram" class="w-11 h-11 rounded-full bg-surface-container-lowest/90 backdrop-blur-md border border-primary/35 hover:border-primary text-secondary hover:text-primary flex items-center justify-center transition-all duration-300 shadow-lg hover:scale-105 hover:shadow-[0_0_18px_rgba(242,202,80,0.35)]" href="https://instagram.com/idcraft.kw" rel="noopener noreferrer" target="_blank">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+          </a>
+          <!-- WhatsApp -->
+          <a aria-label="WhatsApp" class="w-11 h-11 rounded-full bg-surface-container-lowest/90 backdrop-blur-md border border-primary/35 hover:border-primary text-secondary hover:text-primary flex items-center justify-center transition-all duration-300 shadow-lg hover:scale-105 hover:shadow-[0_0_18px_rgba(242,202,80,0.35)]" href="https://wa.me/96522000000" rel="noopener noreferrer" target="_blank">
+            <span class="material-symbols-outlined text-[20px]">chat</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- DUAL-COLUMN ARCHITECTURAL CARD FLOATING OVER TEXTURE -->
+      <div class="w-full max-w-6xl bg-surface-container-lowest/85 backdrop-blur-2xl rounded-2xl border border-primary/30 shadow-[0_20px_60px_rgba(0,0,0,0.85)] overflow-hidden relative">
+        <!-- Top Gold Horizon Line -->
+        <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-80"></div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 divide-y lg:divide-y-0 lg:divide-x divide-outline-variant/30">
+          <!-- LEFT PANE: STREAMLINED COMMISSION FORM -->
+          <div class="lg:col-span-6 p-6 sm:p-8 md:p-10 flex flex-col justify-between relative bg-surface-container-low/40">
+            <div>
+              <div class="flex items-center justify-between mb-6 pb-3 border-b border-outline-variant/25">
+                <span class="font-label-mono-spec text-label-mono-spec uppercase tracking-[0.22em] text-primary font-semibold">Direct Commission Protocol</span>
+                <span class="font-label-mono-spec text-[10px] uppercase tracking-widest text-on-surface-variant/50">Form ID // 024</span>
+              </div>
+              <form class="space-y-4" id="contact-form" onsubmit="event.preventDefault(); handleCleanSubmit();">
+                <!-- Full Name -->
+                <div class="flex flex-col space-y-1.5">
+                  <label class="font-label-action text-label-mono-spec uppercase tracking-[0.16em] text-secondary text-xs" for="client-name">
+                    Name <span class="text-primary">*</span>
+                  </label>
+                  <div class="relative">
+                    <input class="w-full h-11 bg-surface-container-lowest/90 text-on-surface font-body-md text-sm px-3.5 rounded border border-outline-variant/50 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-all placeholder:text-on-surface-variant/30" id="client-name" placeholder="Your full name" required="" type="text"/>
+                    <span class="absolute right-3 top-2.5 text-outline text-[18px] material-symbols-outlined pointer-events-none">person</span>
+                  </div>
+                </div>
+                <!-- Email & Phone Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                  <div class="flex flex-col space-y-1.5">
+                    <label class="font-label-action text-label-mono-spec uppercase tracking-[0.16em] text-secondary text-xs" for="client-email">
+                      Email Address <span class="text-primary">*</span>
+                    </label>
+                    <div class="relative">
+                      <input class="w-full h-11 bg-surface-container-lowest/90 text-on-surface font-body-md text-sm px-3.5 rounded border border-outline-variant/50 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-all placeholder:text-on-surface-variant/30" id="client-email" placeholder="name@domain.com" required="" type="email"/>
+                      <span class="absolute right-3 top-2.5 text-outline text-[18px] material-symbols-outlined pointer-events-none">alternate_email</span>
+                    </div>
+                  </div>
+                  <div class="flex flex-col space-y-1.5">
+                    <label class="font-label-action text-label-mono-spec uppercase tracking-[0.16em] text-secondary text-xs" for="client-phone">
+                      Phone Number <span class="text-primary">*</span>
+                    </label>
+                    <div class="relative">
+                      <input class="w-full h-11 bg-surface-container-lowest/90 text-on-surface font-body-md text-sm px-3.5 rounded border border-outline-variant/50 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-all placeholder:text-on-surface-variant/30" id="client-phone" placeholder="+965 0000 0000" required="" type="tel"/>
+                      <span class="absolute right-3 top-2.5 text-outline text-[18px] material-symbols-outlined pointer-events-none">call</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Subject Dropdown -->
+                <div class="flex flex-col space-y-1.5">
+                  <label class="font-label-action text-label-mono-spec uppercase tracking-[0.16em] text-secondary text-xs" for="commission-subject">
+                    Subject <span class="text-primary">*</span>
+                  </label>
+                  <div class="relative">
+                    <select class="w-full h-11 bg-surface-container-lowest/90 text-on-surface font-body-md text-sm px-3.5 rounded border border-outline-variant/50 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-all appearance-none cursor-pointer" id="commission-subject" required="">
+                      <option class="text-on-surface-variant/40" disabled="" selected="" value="">Select subject inquiry...</option>
+                      <option class="bg-surface-container-high text-on-surface" value="custom">Custom Commission</option>
+                      <option class="bg-surface-container-high text-on-surface" value="corporate">Corporate &amp; Fleet Gifting</option>
+                      <option class="bg-surface-container-high text-on-surface" value="materials">Titanium &amp; Leather Hardware</option>
+                      <option class="bg-surface-container-high text-on-surface" value="consultation">Atelier Consultation</option>
+                      <option class="bg-surface-container-high text-on-surface" value="other">General Inquiry</option>
+                    </select>
+                    <span class="absolute right-3.5 top-3 text-primary text-[20px] material-symbols-outlined pointer-events-none">expand_more</span>
+                  </div>
+                </div>
+                <!-- Message Textarea -->
+                <div class="flex flex-col space-y-1.5">
+                  <label class="font-label-action text-label-mono-spec uppercase tracking-[0.16em] text-secondary text-xs" for="client-message">
+                    Message <span class="text-primary">*</span>
+                  </label>
+                  <textarea class="w-full bg-surface-container-lowest/90 text-on-surface font-body-md text-sm p-3.5 rounded border border-outline-variant/50 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-all placeholder:text-on-surface-variant/30 leading-relaxed resize-none" id="client-message" placeholder="How can we bring your bespoke concept to reality?" required="" rows="4"></textarea>
+                </div>
+                <!-- Submit Button -->
+                <div class="pt-2">
+                  <button class="w-full py-3.5 bg-gradient-to-r from-primary via-primary-container to-primary hover:from-primary-fixed hover:to-primary text-on-primary font-label-action text-label-action uppercase tracking-[0.16em] rounded font-bold transition-all duration-300 shadow-[0_0_25px_rgba(212,175,55,0.3)] hover:shadow-[0_0_35px_rgba(212,175,55,0.55)] flex items-center justify-center gap-2 group cursor-pointer" id="submit-btn" type="submit">
+                    <span>SEND MESSAGE</span>
+                    <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                  </button>
+                </div>
+                <!-- Inline Success Toast -->
+                <div class="hidden p-3.5 rounded bg-primary-container text-on-primary-container border border-primary flex items-center justify-between mt-2 shadow-lg" id="form-success-banner">
+                  <div class="flex items-center gap-2.5">
+                    <span class="material-symbols-outlined text-[20px]">verified</span>
+                    <span class="font-body-sm text-body-sm font-semibold">Thank you. Your message has been transmitted to our Shuwaikh atelier.</span>
+                  </div>
+                  <button class="text-on-primary-container/70 hover:text-on-primary-container" onclick="this.parentElement.classList.add('hidden')" type="button">
+                    <span class="material-symbols-outlined text-[18px]">close</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- RIGHT PANE: REAL-TIME ARCHITECTURAL CARTOGRAPHIC RADAR MAP -->
+          <div class="lg:col-span-6 relative min-h-[460px] lg:min-h-full flex flex-col justify-between overflow-hidden bg-[#0a0c0f] border-t lg:border-t-0 lg:border-l border-outline-variant/30">
+            <!-- Leaflet Real-time Map Canvas -->
+            <div id="atelier-realtime-map" class="absolute inset-0 w-full h-full z-0"></div>
+
+            <!-- Top Real-Time Telemetry HUD Bar (Glassmorphic) -->
+            <div class="relative z-10 p-4 sm:p-6 flex flex-col gap-3 pointer-events-none">
+              <div class="flex items-start justify-between gap-2 flex-wrap">
+                <div class="bg-surface-container-lowest/90 border border-primary/30 rounded-lg p-2.5 backdrop-blur-md shadow-xl flex flex-col pointer-events-auto">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+                    <span class="font-label-mono-spec text-[11px] tracking-[0.2em] uppercase text-primary font-bold">SHUWAIKH METROLOGY RADAR</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-on-surface-variant text-[11px] font-label-mono-spec mt-1">
+                    <span id="map-live-coords" class="text-on-surface font-semibold">29.3456° N, 47.9495° E</span>
+                    <span>•</span>
+                    <span class="text-tertiary">ALT: 12m</span>
+                  </div>
+                </div>
+
+                <div class="bg-surface-container-lowest/90 border border-outline-variant/40 rounded-lg p-2.5 backdrop-blur-md shadow-xl flex flex-col items-end pointer-events-auto">
+                  <div class="flex items-center gap-1.5 font-label-mono-spec text-[11px] text-primary">
+                    <span class="material-symbols-outlined text-[14px]">schedule</span>
+                    <span id="map-live-clock" class="font-bold tracking-wider">--:--:-- AST</span>
+                  </div>
+                  <div class="flex items-center gap-1 text-[10px] font-label-mono-spec text-on-surface-variant mt-0.5">
+                    <span class="text-emerald-400 font-bold">● OPEN</span>
+                    <span>• 09:00 - 19:00</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Weather & Sensor Strip -->
+              <div class="self-start inline-flex items-center gap-2.5 px-3 py-1 bg-surface-container-lowest/85 border border-outline-variant/30 rounded-full backdrop-blur-md text-[10px] font-label-mono-spec text-on-surface-variant shadow-lg pointer-events-auto">
+                <span class="flex items-center gap-1 text-tertiary">
+                  <span class="material-symbols-outlined text-[13px]">wb_sunny</span> 31°C Shuwaikh
+                </span>
+                <span class="opacity-30">•</span>
+                <span>Wind 12 km/h NW</span>
+                <span class="opacity-30">•</span>
+                <span class="text-primary font-semibold">Optical Beam: Active</span>
+              </div>
+            </div>
+
+            <!-- Map Control Quick Actions Overlay (Top Right / Middle) -->
+            <div class="absolute right-4 top-28 z-10 flex flex-col gap-2">
+              <button type="button" onclick="recenterAtelierMap()" title="Center on ID CRAFT Atelier" class="w-9 h-9 rounded-lg bg-surface-container-lowest/90 hover:bg-surface-container border border-primary/40 text-primary flex items-center justify-center shadow-xl backdrop-blur-md transition-all hover:scale-105 cursor-pointer">
+                <span class="material-symbols-outlined text-[19px]">my_location</span>
+              </button>
+              <button type="button" onclick="calculateUserDistance()" title="Calculate Distance from Your Location" class="w-9 h-9 rounded-lg bg-surface-container-lowest/90 hover:bg-surface-container border border-outline-variant/50 hover:border-primary text-on-surface hover:text-primary flex items-center justify-center shadow-xl backdrop-blur-md transition-all hover:scale-105 cursor-pointer">
+                <span class="material-symbols-outlined text-[19px]">route</span>
+              </button>
+              <button type="button" onclick="toggleMapSatellite()" title="Toggle Satellite / Dark Architectural" class="w-9 h-9 rounded-lg bg-surface-container-lowest/90 hover:bg-surface-container border border-outline-variant/50 hover:border-primary text-on-surface hover:text-primary flex items-center justify-center shadow-xl backdrop-blur-md transition-all hover:scale-105 cursor-pointer">
+                <span class="material-symbols-outlined text-[19px]">layers</span>
+              </button>
+            </div>
+
+            <!-- Live Distance Readout Banner (Hidden by default, shown when user calculates distance) -->
+            <div id="user-distance-banner" class="hidden relative z-10 mx-4 sm:mx-6 mb-2 p-3 rounded-lg bg-surface-container-lowest/95 border border-primary/50 shadow-2xl backdrop-blur-md flex items-center justify-between gap-2">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-[20px]">navigation</span>
+                <div class="flex flex-col">
+                  <span class="font-label-mono-spec text-[10px] uppercase text-on-surface-variant">YOUR DISTANCE TO ATELIER</span>
+                  <span id="user-distance-text" class="font-headline-sm text-xs font-bold text-primary">Calculating live route...</span>
+                </div>
+              </div>
+              <button type="button" onclick="document.getElementById('user-distance-banner').classList.add('hidden')" class="text-on-surface-variant hover:text-on-surface p-1">
+                <span class="material-symbols-outlined text-[16px]">close</span>
+              </button>
+            </div>
+
+            <!-- Bottom Atelier Location Chip & Trigger -->
+            <div class="relative z-10 p-4 sm:p-6">
+              <div class="bg-surface-container-lowest/95 backdrop-blur-xl border border-primary/40 p-4 rounded-xl shadow-[0_8px_30px_rgba(0,0,0,0.8)] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div class="flex items-center gap-3 min-w-0">
+                  <div class="w-10 h-10 rounded-lg bg-primary/15 border border-primary/40 flex items-center justify-center text-primary shrink-0 shadow-inner">
+                    <span class="material-symbols-outlined text-[22px]">store</span>
+                  </div>
+                  <div class="flex flex-col truncate">
+                    <span class="font-label-action text-xs md:text-sm font-bold text-on-surface uppercase tracking-wider truncate flex items-center gap-1.5">
+                      <span>ID CRAFT Bespoke Atelier</span>
+                      <span class="text-[10px] px-1.5 py-0.2 bg-primary/20 text-primary rounded font-label-mono-spec">HEADQUARTERS</span>
+                    </span>
+                    <span class="font-label-mono-spec text-[11px] text-tertiary tracking-wider mt-0.5">
+                      Shuwaikh Industrial 1, Street 12, Plot 44 • Kuwait
+                    </span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2 shrink-0">
+                  <button type="button" onclick="calculateUserDistance()" class="px-3 py-2 bg-surface-container hover:bg-surface-container-high text-on-surface hover:text-primary font-label-action text-xs uppercase tracking-wider rounded border border-outline-variant/40 transition-all flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[14px]">near_me</span>
+                    <span>Distance</span>
+                  </button>
+                  <a class="px-3.5 py-2 bg-primary hover:bg-primary-fixed text-on-primary font-label-action text-xs uppercase tracking-widest rounded font-bold transition-all duration-300 flex items-center gap-1.5 shadow-md" href="https://maps.google.com/?q=29.3456,47.9495" rel="noopener noreferrer" target="_blank">
+                    <span>Directions</span>
+                    <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30 relative z-10">
+    <div class="max-w-[1536px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-lg mb-space-xl">
+        <div class="lg:col-span-2 flex flex-col space-y-space-md">
+          <div class="flex items-center gap-space-sm">
+            <img alt="ID CRAFT Luxury Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WQuwLIdSGZ0krsGOhlWCpQj3_eEfPT6j2SmeVRt7W5OpQk0CStqANVQ_rfZsNUScsNGklGnqUi-N_-tZjfrbsYXs5Ydc6VOaTbCyIP47T6myPegKapAUxoPavmO8WmwDdp7hM6ez4oDJxm1-o12b-h0tdYOm0qemnVx-geYmPWN62wzpHXP0-9ZQMGb9_BCdnZ5KsZq96_-UAdIDarDaP7UR-_kakLArn9Cxwi1B8MvUXWJWKaWFLXZkA"/>
+            <span class="font-label-action text-headline-sm uppercase tracking-widest text-on-surface">ID CRAFT</span>
+          </div>
+          <div class="inline-flex items-center gap-2 font-label-eyebrow text-label-eyebrow uppercase tracking-[0.22em] text-tertiary">
+            <span>Kuwait</span><span>•</span><span>Bespoke Atelier</span><span>•</span><span>الشويخ</span>
+          </div>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-md leading-relaxed">
+            Distinguished identity hardware, titanium and saddle leather drinkware, and sovereign heraldry crafted exclusively for ministerial courts, sovereign entities, and bespoke connoisseurs across the Gulf.
+          </p>
+          <div class="pt-space-xs">
+            <div class="inline-flex items-center gap-2 px-space-sm py-1.5 bg-surface-container-low rounded border border-outline-variant/30">
+              <span class="w-2 h-2 rounded-full bg-primary"></span>
+              <span class="font-label-mono-spec text-label-mono-spec tracking-widest uppercase text-on-surface-variant">Laser Precision Tolerance ±0.02mm</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col space-y-space-sm">
+          <h3 class="font-label-eyebrow text-label-eyebrow uppercase tracking-[0.22em] text-primary">Explore</h3>
+          <ul class="flex flex-col space-y-2.5">
+            <li class="font-body-md text-body-md"><a class="text-on-surface-variant hover:text-primary transition-colors" href="shop.html">Bespoke Catalog</a></li>
+            <li class="font-body-md text-body-md"><a class="text-on-surface-variant hover:text-primary transition-colors" href="custom-order.html">Custom Commission</a></li>
+            <li class="font-body-md text-body-md"><a class="text-on-surface-variant hover:text-primary transition-colors" href="product-id-cards.html">Identity Systems</a></li>
+            <li class="font-body-md text-body-md"><a class="text-on-surface-variant hover:text-primary transition-colors" href="product-tumblers.html">Tumblers &amp; Drinkware</a></li>
+            <li class="font-body-md text-body-md"><a class="text-on-surface-variant hover:text-primary transition-colors" href="corporate.html">Corporate Bulk</a></li>
+          </ul>
+        </div>
+        <div class="flex flex-col space-y-space-sm">
+          <h3 class="font-label-eyebrow text-label-eyebrow uppercase tracking-[0.22em] text-primary">Atelier</h3>
+          <ul class="flex flex-col space-y-2.5">
+            <li class="font-body-md text-body-md"><a class="text-on-surface-variant hover:text-primary transition-colors" href="our-work.html">Our Work</a></li>
+            <li class="font-body-md text-body-md"><a class="text-on-surface-variant hover:text-primary transition-colors" href="about.html">Craftsmanship</a></li>
+            <li class="font-body-md text-body-md"><a class="text-on-surface-variant hover:text-primary transition-colors" href="about.html">Materials &amp; Finishes</a></li>
+            <li class="font-body-md text-body-md"><a class="text-on-surface-variant hover:text-primary transition-colors" href="about.html">About Us</a></li>
+            <li class="font-body-md text-body-md"><a class="text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Kuwait Showroom</a></li>
+          </ul>
+        </div>
+        <div class="flex flex-col space-y-space-sm">
+          <h3 class="font-label-eyebrow text-label-eyebrow uppercase tracking-[0.22em] text-primary">Client Care</h3>
+          <ul class="flex flex-col space-y-2.5">
+            <li class="font-body-md text-body-md"><a class="text-on-surface-variant hover:text-primary transition-colors" href="https://wa.me/96522000000" target="_blank">Direct Line (+965)</a></li>
+            <li class="font-body-md text-body-md"><a class="text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Kuwait City Atelier</a></li>
+            <li class="font-body-md text-body-md"><a class="text-on-surface-variant hover:text-primary transition-colors" href="corporate.html">Quotation Portal</a></li>
+            <li class="font-body-md text-body-md"><a class="text-on-surface-variant hover:text-primary transition-colors" href="track-order.html">Track Order</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-space-md border-t border-outline-variant/30 flex flex-col md:flex-row items-center justify-between gap-space-sm">
+        <div class="flex items-center gap-space-md text-on-surface-variant">
+          <a class="hover:text-primary font-label-mono-spec text-label-mono-spec tracking-widest uppercase transition-colors" href="#">Instagram</a>
+          <a class="hover:text-primary font-label-mono-spec text-label-mono-spec tracking-widest uppercase transition-colors" href="#">LinkedIn</a>
+          <a class="hover:text-primary font-label-mono-spec text-label-mono-spec tracking-widest uppercase transition-colors" href="#">Behance</a>
+        </div>
+        <div class="flex items-center gap-2 text-on-surface-variant font-label-mono-spec text-label-mono-spec tracking-widest uppercase">
+          <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          <span>Proudly Crafted in Kuwait • الشويخ / العاصمة</span>
+        </div>
+        <div class="flex items-center gap-space-md text-on-surface-variant font-label-mono-spec text-label-mono-spec tracking-widest uppercase">
+          <span>English / العربية</span>
+          <span>© 2025 ID CRAFT BESPOKE ATELIER. All rights reserved.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/state.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    // Real-Time Map State & Controls
+    let atelierMap = null;
+    let darkTiles = null;
+    let satelliteTiles = null;
+    let isSatellite = false;
+    let atelierMarker = null;
+    let routeLine = null;
+    let userMarker = null;
+    const ATELIER_COORDS = [29.3456, 47.9495];
+
+    function initAtelierRealtimeMap() {
+      const mapContainer = document.getElementById('atelier-realtime-map');
+      if (!mapContainer || typeof L === 'undefined') return;
+
+      atelierMap = L.map('atelier-realtime-map', {
+        center: ATELIER_COORDS,
+        zoom: 14,
+        zoomControl: false,
+        attributionControl: false
+      });
+
+      // CartoDB Dark Matter TileLayer
+      darkTiles = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        maxZoom: 19,
+        subdomains: 'abcd'
+      }).addTo(atelierMap);
+
+      // Satellite TileLayer
+      satelliteTiles = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        maxZoom: 18
+      });
+
+      // Custom Gold Radar Marker
+      const radarIcon = L.divIcon({
+        className: 'custom-leaflet-radar',
+        html: '<div class="atelier-map-radar-pulse"></div>',
+        iconSize: [28, 28],
+        iconAnchor: [14, 14]
+      });
+
+      atelierMarker = L.marker(ATELIER_COORDS, { icon: radarIcon }).addTo(atelierMap);
+
+      // Custom Luxury Popup
+      const popupHtml = `
+        <div class="p-1 flex flex-col gap-1 text-left min-w-[200px]">
+          <div class="flex items-center gap-1.5 font-bold text-xs uppercase text-primary">
+            <span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+            <span>ID CRAFT ATELIER</span>
+          </div>
+          <div class="text-[11px] text-on-surface font-medium">Shuwaikh Industrial 1, Street 12</div>
+          <div class="text-[10px] text-tertiary">Laser Metrology &amp; Sovereign Hardware</div>
+          <div class="mt-1 pt-1 border-t border-white/10 text-[10px] text-emerald-400 font-bold flex items-center gap-1">
+            <span>●</span> <span>OPEN NOW // 09:00 – 19:00 AST</span>
+          </div>
+        </div>
+      `;
+      atelierMarker.bindPopup(popupHtml);
+
+      // Add Zoom Control to bottom-right
+      L.control.zoom({ position: 'bottomright' }).addTo(atelierMap);
+
+      // Real-time Coordinate Readout on Pan/Drag
+      atelierMap.on('move', function() {
+        const center = atelierMap.getCenter();
+        const coordsElem = document.getElementById('map-live-coords');
+        if (coordsElem) {
+          coordsElem.textContent = `${center.lat.toFixed(4)}° N, ${center.lng.toFixed(4)}° E`;
+        }
+      });
+
+      // Invalidate size on container render
+      setTimeout(() => { atelierMap.invalidateSize(); }, 300);
+    }
+
+    function recenterAtelierMap() {
+      if (!atelierMap) return;
+      atelierMap.flyTo(ATELIER_COORDS, 15, { duration: 1.2 });
+      if (atelierMarker) atelierMarker.openPopup();
+    }
+
+    function toggleMapSatellite() {
+      if (!atelierMap) return;
+      if (!isSatellite) {
+        atelierMap.removeLayer(darkTiles);
+        satelliteTiles.addTo(atelierMap);
+        isSatellite = true;
+        if (typeof IDUI !== 'undefined') IDUI.showToast('Satellite Imagery Activated', 'info');
+      } else {
+        atelierMap.removeLayer(satelliteTiles);
+        darkTiles.addTo(atelierMap);
+        isSatellite = false;
+        if (typeof IDUI !== 'undefined') IDUI.showToast('Dark Architectural Map Activated', 'info');
+      }
+    }
+
+    function calculateUserDistance() {
+      const banner = document.getElementById('user-distance-banner');
+      const textElem = document.getElementById('user-distance-text');
+      if (banner) banner.classList.remove('hidden');
+      if (textElem) textElem.textContent = 'Acquiring GPS telemetry...';
+
+      if (!navigator.geolocation) {
+        fallbackDistanceCalc();
+        return;
+      }
+
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const userLat = position.coords.latitude;
+          const userLng = position.coords.longitude;
+          renderRouteDistance(userLat, userLng);
+        },
+        (err) => {
+          // Fallback to Kuwait City Center (29.3759, 47.9774)
+          fallbackDistanceCalc();
+        },
+        { timeout: 6000 }
+      );
+    }
+
+    function fallbackDistanceCalc() {
+      // Default to Kuwait City center for demonstration
+      renderRouteDistance(29.3759, 47.9774, true);
+    }
+
+    function renderRouteDistance(lat, lng, isDemo = false) {
+      if (!atelierMap) return;
+      const distKm = getDistanceFromLatLonInKm(lat, lng, ATELIER_COORDS[0], ATELIER_COORDS[1]);
+      const estMin = Math.max(5, Math.round(distKm * 1.8));
+
+      const textElem = document.getElementById('user-distance-text');
+      if (textElem) {
+        textElem.innerHTML = `<span class="text-white">${distKm.toFixed(1)} km</span> away from Shuwaikh Atelier <span class="text-tertiary">(~${estMin} mins drive${isDemo ? ' from Capital' : ''})</span>`;
+      }
+
+      // Draw route line
+      if (routeLine) atelierMap.removeLayer(routeLine);
+      if (userMarker) atelierMap.removeLayer(userMarker);
+
+      const userIcon = L.divIcon({
+        className: 'user-geo-pin',
+        html: '<div class="w-4 h-4 rounded-full bg-emerald-400 border-2 border-[#0d0e10] shadow-[0_0_12px_#34d399]"></div>',
+        iconSize: [16, 16],
+        iconAnchor: [8, 8]
+      });
+
+      userMarker = L.marker([lat, lng], { icon: userIcon }).addTo(atelierMap);
+      userMarker.bindPopup(isDemo ? '<div class="text-xs font-bold text-on-surface">Kuwait City Capital Sector</div>' : '<div class="text-xs font-bold text-on-surface">Your Current Location</div>').openPopup();
+
+      routeLine = L.polyline([[lat, lng], ATELIER_COORDS], {
+        color: '#f2ca50',
+        weight: 3,
+        opacity: 0.85,
+        dashArray: '6, 8'
+      }).addTo(atelierMap);
+
+      const bounds = L.latLngBounds([[lat, lng], ATELIER_COORDS]);
+      atelierMap.fitBounds(bounds, { padding: [60, 60], maxZoom: 15 });
+    }
+
+    function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
+      const R = 6371; // Radius of the earth in km
+      const dLat = (lat2 - lat1) * Math.PI / 180;
+      const dLon = (lon2 - lon1) * Math.PI / 180;
+      const a = 
+        Math.sin(dLat/2) * Math.sin(dLat/2) +
+        Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * 
+        Math.sin(dLon/2) * Math.sin(dLon/2); 
+      const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+      return R * c;
+    }
+
+    // Real-Time Kuwait Local Clock Ticker
+    function startRealtimeClock() {
+      function updateClock() {
+        const now = new Date();
+        const options = { timeZone: 'Asia/Kuwait', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+        const timeStr = new Intl.DateTimeFormat('en-GB', options).format(now);
+        const clockElem = document.getElementById('map-live-clock');
+        if (clockElem) {
+          clockElem.textContent = `${timeStr} AST`;
+        }
+      }
+      updateClock();
+      setInterval(updateClock, 1000);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initAtelierRealtimeMap();
+      startRealtimeClock();
+    });
+
+    function handleCleanSubmit() {
+      const name = document.getElementById('client-name').value;
+      const email = document.getElementById('client-email').value;
+      const phone = document.getElementById('client-phone').value;
+      const subject = document.getElementById('commission-subject').value;
+      const message = document.getElementById('client-message').value;
+      const banner = document.getElementById('form-success-banner');
+      const submitBtn = document.getElementById('submit-btn');
+
+      submitBtn.innerHTML = '<span>TRANSMITTING...</span>';
+      submitBtn.disabled = true;
+
+      // Save inquiry to state
+      if (typeof IDState !== 'undefined' && IDState.rfq) {
+        IDState.rfq.submit({
+          clientName: name,
+          company: 'Inquiry: ' + subject,
+          email: email,
+          phone: phone,
+          volume: '1',
+          substrate: 'Inquiry',
+          notes: message
+        });
+      }
+
+      setTimeout(() => {
+        submitBtn.innerHTML = '<span>MESSAGE SENT</span><span class="material-symbols-outlined text-[18px]">done_all</span>';
+        banner.classList.remove('hidden');
+        document.getElementById('contact-form').reset();
+        if (typeof IDUI !== 'undefined') {
+          IDUI.showToast('Inquiry Transmitted to Shuwaikh Metrology Lab', 'success');
+        }
+      }, 700);
+    }
+  </script>
+</body>
+</html>

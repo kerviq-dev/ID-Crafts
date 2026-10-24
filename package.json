@@ -1,0 +1,26 @@
+{
+  "name": "id-crafts-luxury-atelier",
+  "version": "1.0.0",
+  "description": "ID Crafts — Kuwait Bespoke Identity & Luxury Atelier E-Commerce Platform",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx -y serve . -l 3000",
+    "start": "npx -y serve . -l 3000",
+    "serve": "npx -y serve .",
+    "build": "echo 'Static site — no build step required'",
+    "preview": "npx -y serve . -l 4173"
+  },
+  "keywords": [
+    "ecommerce",
+    "luxury",
+    "id-crafts",
+    "kuwait",
+    "bespoke",
+    "identity"
+  ],
+  "author": "ID Crafts Atelier",
+  "license": "ISC",
+  "engines": {
+    "node": ">=18"
+  }
+}
