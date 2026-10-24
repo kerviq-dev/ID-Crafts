@@ -1,7 +1,6 @@
 {
   "version": 2,
   "name": "id-crafts-luxury-atelier",
-  "public": true,
   "headers": [
     {
       "source": "/(.*)",
