@@ -1,6 +1,9 @@
 {
   "version": 2,
   "name": "id-crafts-luxury-atelier",
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "cleanUrls": true,
   "headers": [
     {
       "source": "/(.*)",
@@ -34,12 +37,6 @@
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=86400" }
       ]
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/((?!.*\\.).*)",
-      "destination": "/index.html"
     }
   ]
 }
